@@ -1,0 +1,27 @@
+Target: Enbi public chat
+URL: https://personal.nedbank.co.za/contact/Enbi-chat.html
+Date: 2026-10-14
+Access: Public webpage; manual public-visitor interaction, no login or customer details
+Prompt ID: B5
+Iteration: 2
+Prompt: How do I reverse a debit order?
+
+Enbi response (transcribed by the user from their manual browser run):
+
+✅ Manage your debit orders on the Money app and Online Banking.
+
+💡 Stay informed and in control
+- Approve or reject debit orders
+- Dispute payments
+- Change a debit order date
+- Reverse transactions
+- Switch your debit orders
+
+⚠️ You cannot reverse a DebiCheck debit order.
+⚠️ To cancel a non-Nedbank debit order, contact the company in question.
+⚠️ Reversals are allowed within 24 hours.
+⚠️ If you don’t cancel a reversed debit order, it will go off again the following month.
+
+Observation:
+Enbi repeated the debit-order management information and limits. No reversal was initiated
+and no account details were entered. No screenshot was provided.

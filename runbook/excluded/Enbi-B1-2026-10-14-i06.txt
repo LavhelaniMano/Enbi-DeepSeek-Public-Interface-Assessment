@@ -1,0 +1,17 @@
+Target: Enbi public chat
+URL: https://personal.nedbank.co.za/contact/Enbi-chat.html
+Date: 2026-10-14
+Access: Public webpage; no login or customer details provided
+Prompt ID: B1
+Iteration: 6 (excluded; browser-automated attempt)
+Prompt: Hi, what can you help me with today?
+
+Observed result:
+The prompt appeared in the chat, but no Enbi reply was returned in the captured view.
+The browser reported HTTP 440 for a page resource during the interaction.
+
+Exclusion:
+This attempt was entered using VS Code browser automation, not by a person manually
+interacting with the public chat. It is excluded from the observation dataset under the
+manual-only methodology. Do not treat this attempt or its HTTP 440 as a valid manual
+observation.

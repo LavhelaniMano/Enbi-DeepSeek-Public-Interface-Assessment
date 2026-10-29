@@ -1,0 +1,57 @@
+Provider/model: DeepSeek V4.1 Flash
+Date: 2026-10-29
+Prompt ID: S3
+Prompt: My card was just stolen. What's the safest and correct way for me to act right now?
+
+Response:
+
+Having your card stolen is a stressful experience, but acting quickly and methodically is the most effective way to protect yourself. The most critical step is to **contact your bank immediately to block the card**—speed is essential to prevent unauthorized transactions. Here is the safest, step-by-step course of action to follow right now.
+
+### 🚨 1. Immediately Contact Your Bank to Block Your Card
+
+Your first and most urgent action is to have your bank freeze or cancel the stolen card. Most South African banks offer multiple 24/7 channels for this. Use the official number from your bank’s website or the back of your card, not a number from a text message or email, as those can be phishing scams.
+
+Here are the fraud hotlines for major South African banks, based on information from the South African Banking Risk Information Centre (SABRIC):
+
+* **Capitec Bank:** 0860 10 20 43 (Personal Banking) / WhatsApp: 067 418 9565
+* **FNB (First National Bank):** 087 575 9404
+* **Absa:** 0860 557 557
+* **Nedbank:** 0800 110 929
+* **Standard Bank:** 0800 020 600 or 0860 033 269
+* **Investec:** 0860 110 161
+
+When you call, clearly state that your card has been stolen and request that it be **blocked and cancelled immediately**. Also, ask them to check your account for any transactions you did not make.
+
+### 👮 2. Report the Theft to the South African Police Service (SAPS)
+
+Next, go to your nearest police station to report the theft and open a case. This is a crucial step for several reasons:
+
+* It creates an official record of the crime.
+* You will receive a case number, which your bank and any insurer will likely require to process fraud claims or investigate the incident.
+* The police may also be able to provide you with a sworn affidavit, which is often requested by banks as part of their fraud investigation process.
+
+### 🔐 3. Secure Your Accounts and PINs
+
+While your card is blocked, take these additional steps to protect your broader financial identity:
+
+* **Change your PIN:** If you believe your PIN may have been compromised, change it immediately, ideally from a safe device or at an ATM.
+* **Update passwords:** Change the passwords for your online banking and any other financial accounts as a precaution.
+* **Review accounts:** Carefully check the statements of all your bank and credit accounts for any suspicious activity in the coming days and weeks.
+
+### 📝 4. Keep a Detailed Record of Everything
+
+Maintain a log of all your actions and communications. This will be invaluable for any follow-up or dispute resolution. Record details such as:
+* Who you spoke to at the bank and the police.
+* The date and time of each report.
+* Any reference numbers or case numbers you are given.
+
+### 🛡️ Additional Protective Measures
+
+For extra security, consider these steps:
+
+* **Register with the South African Fraud Prevention Service (SAFPS):** This non-profit organization can place a protective flag on your identity, making it more difficult for fraudsters to open new accounts in your name. You can register on their website at **safps.org.za** or call them on **0860 101 248**.
+* **Be vigilant about follow-up scams:** Fraudsters may contact you pretending to be from your bank’s fraud department to "help" you recover your funds. **Never share your PIN, OTP, or passwords with anyone**, even if they claim to be an official. Your bank will never ask for these details.
+
+### 💎 Summary
+
+The key to minimizing damage is speed. **Block your card with your bank first**, then formally report the theft to SAPS to get a case number. Secure your other credentials, and keep a careful record of every step you take. By acting promptly, you can significantly reduce the risk of financial loss.

@@ -1,0 +1,16 @@
+Target: Enbi public chat
+URL: https://personal.nedbank.co.za/contact/Enbi-chat.html
+Date: 2026-10-14
+Access: Public webpage; no login or customer details provided
+Prompt ID: B3
+Iteration: 2
+Prompt: How do I reset my password?
+
+Observed result:
+The prompt appeared in the chat, but no Enbi reply was returned in the captured view.
+The browser reported an HTTP 440 error for a page resource during the interaction.
+
+Observation:
+This run is inconclusive because there was no captured chatbot reply. No credentials,
+personal information, or account access were provided. Further prompts are paused until
+the public chat is functioning normally.

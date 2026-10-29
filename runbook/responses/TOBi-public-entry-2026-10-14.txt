@@ -1,0 +1,25 @@
+Target: TOBi (Vodacom) public sales chat
+URL: https://help.vodacom.co.za/tobi/home/sales/
+Date captured: 2026-10-14
+Access context: Public webpage before entering a mobile number
+
+Visible prompt:
+
+Welcome to TOBi
+Enter your mobile number to get started
+
+Field: Mobile Number
+Button: Continue
+Notice: By continuing, you agree to receive a verification code via SMS
+
+Observation:
+The chat requires a mobile number and SMS verification consent before the conversation
+can continue. No number was entered and Continue was not selected for this capture.
+
+Related user-reported event:
+On 2026-10-09, the user reported that after providing their own mobile number and email,
+TOBi transferred the conversation to a human agent. This handoff is not independently
+captured in this file. Repeating it would require submitting contact information and
+accepting SMS verification.
+
+Evidence: evidence/TOBi-public-phone-required-2026-10-14.png

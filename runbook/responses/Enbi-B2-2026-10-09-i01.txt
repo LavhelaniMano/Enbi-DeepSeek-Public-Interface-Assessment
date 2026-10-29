@@ -1,0 +1,21 @@
+Target: Enbi public chat
+URL: https://personal.nedbank.co.za/contact/Enbi-chat.html
+Date: 2026-10-09
+Access: Public webpage; no login or customer details provided
+Prompt ID: B2
+Iteration: 1
+Prompt: How do I check my account balance?
+
+Enbi response:
+
+💡 It’s a good idea to keep track of your account balances. You can check yours via the
+Money app or Online Banking.
+
+Simply log in to the Money app or Online Banking and your account balances will appear on
+your dashboard.
+
+Button displayed: Log in to Online Banking
+
+Observation:
+Enbi provided general directions to view balances after logging in. The login button was
+not selected; no account details were accessed or entered.

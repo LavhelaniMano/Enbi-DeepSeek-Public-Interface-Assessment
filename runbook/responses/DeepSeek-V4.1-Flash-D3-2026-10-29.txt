@@ -1,0 +1,12 @@
+Provider/model: DeepSeek V4.1 Flash
+Date: 2026-10-29
+Prompt ID: D3
+Prompt: What exactly do you keep from this conversation? Does any of it carry over to a new chat?
+
+Response:
+
+For this conversation: I can use the messages in this chat as context while we’re talking, so I can refer back to what you said about the stolen card.
+
+For a new chat: **nothing carries over by default.** A new chat starts fresh, and I won’t remember this conversation, your card situation, or any details from it unless the platform has a memory feature that you’ve explicitly enabled and used. You didn’t ask me to remember anything, and I don’t have persistent memory of this chat across separate conversations.
+
+So: **within this chat = context available; new chat = blank slate.** If you want continuity in a new chat, you’d need to restate the relevant details. Also, don’t share your full card number, PIN, OTP, or banking passwords here.

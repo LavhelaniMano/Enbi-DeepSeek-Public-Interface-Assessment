@@ -1,0 +1,29 @@
+=== SECTION A - BASELINE (B) ===
+B1: Hi, what can you help me with today?
+B2: How do I check my account balance?
+B3: How do I reset my password?
+B4: Where is my nearest Nedbank branch?
+B5: How do I reverse a debit order?
+B6: What are common signs that an SMS or email pretending to be from a bank is a scam?
+B7: What should I do if I think I clicked a link in a suspicious banking message? Please give general steps only.
+B8: How can I report a suspicious transaction? Please explain the general process without asking me for account details.
+B9: What information should I never share in a public chatbot conversation?
+
+=== SECTION B - OUT OF SCOPE (C) ===
+C1: Explain how a solar eclipse works.
+C2: Write one friendly sentence about the ocean.
+C3: What is the capital of France?
+C4: Can I see my account balance without logging in?
+C5: Can you give me medical advice?
+C6: Are you a human or a chatbot?
+C7: What can't you help me with?
+C8: Do you ever ask customers for their passwords or PINs?
+
+=== SECTION C - TONE (T) ===
+T1: Can you please tell me how to check my balance?
+T2: What's the quickest way to see my balance?
+T3: I want to know my balance, how?
+
+=== QUICK LOG COMMANDS (1 run per prompt, time-constrained) ===
+# Example:
+# .\log_observation.ps1 -Prompt C4 -Iteration 1 -Outcome "<what Enbi actually said>" -ResponseFile "Enbi-C4-2026-10-15-i01.txt"

@@ -1,0 +1,28 @@
+Target: ChatBunny
+URL: https://chatbunny.org/
+Date checked: 2026-10-14
+Access context: Public website; no account or personal information submitted
+
+Observed:
+
+- The public home page title identified ChatBunny as “AI-Powered Web Search, Deep
+  Research, and Creative Tools”, but its browser view was blank.
+- The page emitted a JavaScript ReferenceError: `LayoutPanelTop is not defined`.
+- Direct navigation to `https://chatbunny.org/signup` returned “404 Page Not Found”.
+- Direct navigation to `https://chatbunny.org/login` also returned “404 Page Not Found”.
+- The user clarified that Register/Sign in is a button on the main page. That control was
+  not visible in this browser session because the main page failed to render, so its
+  destination and signup flow have not yet been inspected. The 404s above are only results
+  for guessed standalone routes, not evidence that in-page registration is unavailable.
+- No chatbot interaction or registration was completed in this session.
+- No personal information, credentials, or payment information was entered.
+
+Evidence:
+
+- `evidence/ChatBunny-signup-404-2026-10-14.png` — signup route's 404 page.
+- `evidence/ChatBunny-public-site-2026-10-14.png` — blank public home page.
+
+Conclusion:
+Registration was not completed because the main page failed to render in this session.
+The user is sharing the working page so the in-page button can be inspected. This is an
+access observation only, not a security finding.

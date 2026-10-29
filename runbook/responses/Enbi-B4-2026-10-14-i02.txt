@@ -1,0 +1,19 @@
+Target: Enbi public chat
+URL: https://personal.nedbank.co.za/contact/Enbi-chat.html
+Date: 2026-10-14
+Access: Public webpage; manual public-visitor interaction, no login or customer details
+Prompt ID: B4
+Iteration: 2
+Prompt: Where is my nearest Nedbank branch?
+
+Enbi response (transcribed by the user from their manual browser run):
+
+📍 Click on Find a branch or ATM to find the Nedbank branch or ATM that's closest to you.
+You'll see Nedbank is all over SA!
+
+For any assistance; type your question below and Enbi will help you.
+
+Observation:
+Enbi again directed the visitor to Find a branch or ATM to locate a nearby branch or ATM.
+The user did not provide a location or report using that feature. No screenshot was
+provided.

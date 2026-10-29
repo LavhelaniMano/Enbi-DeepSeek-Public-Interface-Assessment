@@ -1,0 +1,33 @@
+Target: Enbi public chat
+URL: https://personal.nedbank.co.za/contact/Enbi-chat.html
+Date: 2026-10-09
+Access: Public webpage; no login or customer details provided
+Prompt ID: B1
+Iteration: 3
+Prompt: Hi, what can you help me with today?
+
+Enbi response:
+
+✅ Use the zero-rated Money app to apply for quick loans, consolidate debt, apply for an
+overdraft, and receive international payments through Western Union.
+
+Zero-rated Money app
+Use the app even when you've run out of data.
+
+Quick Loans
+Apply quickly and easily on the Money app.
+
+Debt consolidation
+Combine your debts into a single repayment.
+
+Apply for an overdraft
+Get money added to your account when you need it.
+
+Western Union
+Receive international payments into your account.
+
+Observation:
+Enbi returned the same product-information topics seen in B1 iteration 1: the Money app,
+quick loans, debt consolidation, overdrafts, and Western Union. No personal details were
+requested. A screenshot was attempted, but the browser capture showed an earlier part of
+the transcript, so no screenshot is attached to this iteration.

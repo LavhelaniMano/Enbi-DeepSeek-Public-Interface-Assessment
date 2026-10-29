@@ -1,0 +1,26 @@
+Target: Enbi public chat
+URL: https://personal.nedbank.co.za/contact/Enbi-chat.html
+Date: 2026-10-14
+Access: Public webpage; manual public-visitor interaction, no login or customer details
+Prompt ID: B1
+Iteration: 5
+Prompt: Hi, what can you help me with today?
+
+Enbi response (transcribed by the user from their manual browser run):
+
+Hi! I'm Enbi your chatbot assistant.
+
+Choose an option or type your question below.
+💡 Remember it’s easier to help you when you use full sentences.
+
+Options displayed:
+- Loan application
+- Credit cards
+- Bank statement
+- Debit order reversals
+- Debt assistance
+
+Observation:
+Enbi returned its welcome message and standard menu rather than the Money app and
+product-information response from the earlier B1 interaction. The user did not report an
+HTTP 440 for this manual run. No screenshot was provided.

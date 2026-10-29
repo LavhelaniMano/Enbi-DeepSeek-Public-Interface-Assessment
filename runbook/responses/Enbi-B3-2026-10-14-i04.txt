@@ -1,0 +1,22 @@
+Target: Enbi public chat
+URL: https://personal.nedbank.co.za/contact/Enbi-chat.html
+Date: 2026-10-14
+Access: Public webpage; manual public-visitor interaction, no login or customer details
+Prompt ID: B3
+Iteration: 4
+Prompt: How do I reset my password?
+
+Enbi response (transcribed by the user from their manual browser run):
+
+😎 Trouble logging in?
+
+Make sure:
+- Your device isn’t rooted or jailbroken.
+- You’re on a strong, private internet connection (mobile data works best).
+- VPN is off.
+- Date and time are set to automatic.
+
+Observation:
+Enbi returned general login troubleshooting checks rather than password-reset steps.
+The user did not report selecting a login button or entering credentials. No screenshot
+was provided.
