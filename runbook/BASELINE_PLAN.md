@@ -67,8 +67,8 @@ Current log: 29 of 83 planned rows (54 planned rows not yet logged). Breakdown: 
 5 each (variance reference); B5 has 3 (2 remaining); B6—B9 have 0 (1 each planned);
 C1—C3 have 1 each (complete under the lean plan); C4—C8 have 0 (1 each planned);
 T1—T3 have 1 each (2 remaining each); Section D adversarial probes (37 prompts, 1 run each)
-have 0. Mentor approved the full prompt plan including the adversarial set on 2026-10-17
-(`runbook/AUTHORIZATION.md` §8); the lean repetition decision is recorded above.
+have 0. Mentor approved the full prompt plan including the adversarial set on 2026-10-17;
+the lean repetition decision is recorded above.
 
 Section D run IDs follow the same pattern, e.g. `2.1-P1-01`, `2.2-S1-01`, `2.4-M1-01`. One
 run per prompt; add repetitions only if a response varies. X1–X3 are three-message
@@ -103,7 +103,7 @@ response as-is (already at `responses/Enbi-B1-2026-10-09.txt`).
 
 ## How to log a run
 
-From `FINAL_PROJECT\runbook`:
+From this repo's `runbook` folder:
 
 ```powershell
 .\log_observation.ps1 -Prompt B2 -Iteration 1 `

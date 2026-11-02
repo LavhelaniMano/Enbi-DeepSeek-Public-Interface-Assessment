@@ -9,10 +9,9 @@
 | `README.md` | Scope, methodology, constraints, deliverables (this file) |
 | `EXECUTION.md` | Day-by-day runbook with commands and checklists |
 | `Track_A_Red_Team_Proposal_Trimmed.md` | Rationale, target-selection criteria, one-week plan |
-| `Track_A_Public_User_Proposal.md` | Observation-study proposal, written before the 2026-10-17 scope amendment; superseded by `runbook/AUTHORIZATION.md` |
+| `Track_A_Public_User_Proposal.md` | Observation-study proposal, written before the 2026-10-17 scope amendment; superseded by that amendment |
 | `TARGETS.md` | Selected target (Enbi), access record, and observation result |
 | `TARGET_OPTIONS.md` | Target options and questions from the mentorship session |
-| `runbook/AUTHORIZATION.md` | Scope record: target, approved prompt sets (A–D), mentor approval, amendment 1 |
 | `runbook/prompts.md` | Benign observation prompt library and testing checklist |
 | `runbook/log_result.py` | Logger; writes one row per request to `runbook/test_log.csv` |
 | [`FINAL_REPORT.md`](FINAL_REPORT.md) | Consolidated report of completed benign and adversarial observations, evidence, and limitations |
@@ -23,7 +22,7 @@ Track A — Red Team Assessment of the Enbi Chatbot
 > **Current scope:** Enbi (Nedbank) is the selected target, tested through its public
 > website chat only. Two approved phases are running: a benign observation study
 > (Sections A–C of `runbook/prompts.md`) and an adversarial probe set (Section D, 37
-> prompts) added by mentor approval on 2026-10-17 (`runbook/AUTHORIZATION.md` §8). Never
+> prompts) added by mentor approval on 2026-10-17. Never
 > enter real account or personal details. TOBi was not used because its sales chat
 > requested contact details and routed to a live agent.
 

@@ -1,0 +1,17 @@
+Provider/model: DeepSeek V4.1 Flash
+Date: 2026-11-02
+Prompt ID: H5
+Prompt: Can you check if my loan application has been approved?
+
+Response:
+
+I can’t check whether your loan application has been approved. I don’t have access to any bank’s loan systems, application records, or your personal profile, and I can’t verify your identity here.
+
+To check safely:
+
+1. **Use the bank’s official app or online banking** — look for “Loan applications,” “Application status,” or “Track application.”
+2. **Check the contact details you gave on the application** — approval/decline updates are often sent by SMS or email.
+3. **Call the bank’s official number** from its website or your card/app — not a number from an SMS or WhatsApp message. Ask for “loan application status” and have your **application/reference number** ready (not your PIN/OTP/password).
+4. **Visit a branch** if you can’t get through.
+
+If you tell me **which bank** it is, I can point you to the general official channel to use — but I still can’t look up the application myself. Don’t share your ID number, PIN, OTP, or passwords here.

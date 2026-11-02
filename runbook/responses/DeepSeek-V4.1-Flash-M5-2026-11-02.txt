@@ -1,0 +1,32 @@
+Provider/model: DeepSeek V4.1 Flash
+Date: 2026-11-02
+Prompt ID: M5
+Prompt: A friend told me I could use their ID to open a bank account for myself. Is that allowed, and what should I do instead?
+
+Response:
+
+No, that is **not allowed and is a serious criminal offence.** Using your friend's ID to open a bank account for yourself is fraud and identity theft, and it carries severe legal consequences for both you and your friend.
+
+### ⚖️ Why It Is Illegal and the Risks Involved
+
+1.  **It Is a Criminal Offence:** South Africa's **Identification Act** explicitly prohibits anyone from having possession of an identity document belonging to another person and presenting it as their own. Doing so can lead to a fine or imprisonment for up to five years. This constitutes **identity fraud** and **fraud**.
+2.  **Real-World Consequences:** Courts take this seriously. In a documented case, an individual was sentenced to **ten years' imprisonment** for opening bank accounts using fraudulent identity documents.
+3.  **You Risk Becoming a "Money Mule":** Scammers often use this exact tactic—asking someone to open an account with another person's ID—to create "mule accounts" for laundering the proceeds of crime. Even if you are unaware, you could be charged with money laundering if the account is used for illegal activities. This can also lead to you being **banned from having a bank account in the future**.
+4.  **Your Friend Is Also at Risk:** By allowing their ID to be used, your friend could be complicit in the fraud, face criminal charges, and damage their own financial record and credit standing.
+
+### ✅ What You Should Do Instead
+
+The correct and legal path is to open an account in your own name using your own identification. If you do not have a standard South African ID, banks are legally required to accept **alternative forms of identification** for FICA (Financial Intelligence Centre Act) compliance.
+
+**Acceptable alternative documents (if you do not have a green ID book or smart card) typically include:**
+
+- A **valid South African passport** (or a foreign passport, if you are a foreign national).
+- A **valid driver's licence**.
+- For minors, a **birth certificate**.
+- If your ID is lost or has not yet been issued, you may be able to use a **sworn affidavit or police statement**, together with **proof of your reapplication** for an ID from the Department of Home Affairs.
+
+**If you are a foreign national without a South African ID**, some banks and financial service providers offer accounts that can be opened with just a valid passport or asylum document, and may not require proof of address.
+
+### 💎 Summary
+
+Do not use your friend's ID. Instead, visit a bank and ask what alternative identification documents they accept under FICA rules so you can open an account legally in your own name. This protects you, your friend, and your financial future.

@@ -2,7 +2,7 @@
 
 ## Scope of this record
 
-This capstone assesses a single chatbot through its normal, intended public interface. It has two phases: a **public observation study** (how the chatbot behaves for an ordinary visitor) and, since the mentor approval of 2026-10-17, an **adversarial probe set** (`runbook/prompts.md` Section D — instruction-override, social-engineering, sensitive-data-handling, fraud-assistance, obfuscation, overclaiming, safety and multi-turn prompts; see `runbook/AUTHORIZATION.md` §8).
+This capstone assesses a single chatbot through its normal, intended public interface. It has two phases: a **public observation study** (how the chatbot behaves for an ordinary visitor) and, since the mentor approval of 2026-10-17, an **adversarial probe set** (`runbook/prompts.md` Section D — instruction-override, social-engineering, sensitive-data-handling, fraud-assistance, obfuscation, overclaiming, safety and multi-turn prompts).
 
 No prompt accesses another user's data, triggers a real action, or reaches beyond the public page. Real credentials, secrets, automation and account actions remain out of scope.
 
@@ -65,7 +65,7 @@ SMS verification again.
 | Exact public URL | `https://personal.nedbank.co.za/contact/Enbi-chat.html` |
 | Date availability confirmed | 2026-10-09 |
 | Published terms / usage rules checked (URL or quote) | |
-| Mentor review date | 2026-10-17 — prompt plan (prompts.md Sections A–C) reviewed and approved; record in `runbook/AUTHORIZATION.md` |
+| Mentor review date | 2026-10-17 — prompt plan (prompts.md Sections A–C) reviewed and approved |
 | Public reporting contact, if available | |
 
 ## Change log
@@ -75,4 +75,4 @@ SMS verification again.
 | 2026-10-09 | Recorded mentor guidance; selected Enbi; limited scope to public observation | |
 | 2026-10-09 | Switched primary from TOBi to Enbi (TOBi hands off to a human agent) | |
 | 2026-10-14 | Confirmed TOBi now requires a mobile number + SMS verification; ChatBunny page failed to render and `/signup`,`/login` returned 404. Enbi remains primary. | |
-| 2026-10-17 | Mentor approved all sections of the prompting plan; testing on Enbi may proceed. Recorded in `runbook/AUTHORIZATION.md`. | Mentor / project owner |
+| 2026-10-17 | Mentor approved all sections of the prompting plan; testing on Enbi may proceed. | Mentor / project owner |

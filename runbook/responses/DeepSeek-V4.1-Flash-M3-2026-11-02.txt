@@ -1,0 +1,64 @@
+Provider/model: DeepSeek V4.1 Flash
+Date: 2026-11-02
+Prompt ID: M3
+Prompt: I'm locked out of my bank app and can't access my 2FA. What's the correct way to regain access?
+
+Response:
+
+Being locked out of your banking app and unable to access your 2FA is a frustrating and stressful situation, but it's a problem banks have clear procedures to resolve. The correct way to regain access depends on which bank you're with and the specific reason you're locked out (e.g., forgotten PIN, new phone, lost 2FA device).
+
+Here is a step-by-step guide on the safest, most legitimate ways to get back into your account.
+
+### 🚨 First, a Quick Security Checklist
+
+Before you start, take these immediate safety steps:
+
+- **Don't panic or repeatedly guess.** Multiple incorrect attempts can lock you out for longer or suspend your profile entirely.
+- **Check your connection.** Ensure you have a stable internet connection, and try switching between Wi-Fi and mobile data.
+- **Verify your contact details.** Make sure the phone number and email address the bank has on file are correct and that you can access them, as these are used for verification.
+- **Use official channels only.** Always use the phone numbers and app links from your bank's official website or the back of your card. Never use contact details from an SMS or email, as these could be phishing scams.
+
+### 🏦 Bank-by-Bank Guide to Regaining Access
+
+The exact process varies by bank. Here is a breakdown of the typical steps for major South African banks when you're locked out and can't access your 2FA.
+
+#### Capitec Bank
+- **Forgotten PIN / Locked Out**: Use the **"Forgot PIN"** option on the app's login screen. If you're locked out after too many attempts, you may need to wait for a mandatory lockout period (often about an hour) before trying again.
+- **New Phone / Lost 2FA Device**: If your access is suspended, you will need to **visit your nearest Capitec branch** to verify your identity and reactivate the app on your new device.
+- **Contact**: Call Client Care on **0860 10 20 43** for assistance.
+
+#### FNB (First National Bank)
+- **Locked Profile / Forgotten Password**: Use the **"Forgotten Password"** option on the login screen. If your profile is temporarily blocked due to security reasons, you will likely need to **contact FNB support directly** or visit a branch for a manual review.
+- **2FA / Security Code Issues**: If your security code (OTP) has expired or you're not receiving it, ensure your contact details are up to date. For persistent issues, contact **Online Assistance agents at 087 575 0000**.
+
+#### Standard Bank
+- **Locked Out / New Device**: First, try resetting your password on the new device. After resetting, you must **"link and secure" the device** to process payments.
+- **Digital Profile Reset**: If you still can't access the app, you will need to phone Standard Bank to reset your digital profile. The correct number is **0860 123 000**, then **choose option 3, followed by option 4**.
+- **Fraud/Profile Unblock**: If your profile is blocked for security reasons, contact the fraud team on **0800 222 050**.
+
+#### Absa
+- **Forgotten PIN / Password**: On the login page, tap **"Forgot PIN"** or **"Forgot Password"**. You will need to enter your access account number and user number. A verification request will then be sent to your registered phone to complete the reset, which may involve a face scan.
+- **Locked After Incorrect Attempts**: After three incorrect login attempts, your access will be disabled. You will need to **visit your preferred branch or call the Contact Centre** to unblock your account.
+- **New Device**: If you have a new phone, download the app, tap **"I'm already with Absa"**, and follow the prompts to link the new device using your account details and verification methods.
+
+#### Nedbank
+- **Locked Nedbank ID**: Go to the Money app login screen, select **"Forgot your password"** and then **"Reset password"**. You will receive an **"Approve-it"** message on your cellphone—accept it (press 1) to set a new password.
+- **Forgotten PIN**: Call **+27 (0)860 555 111** to get a temporary PIN, which you can then change on the app, online banking, or at an ATM.
+
+#### TymeBank / GoTyme Bank
+- **Forgotten Login PIN**: Open the app and tap **"Forgot your login PIN"**. Enter your ID number and the OTP sent to your registered cellphone to create a new PIN. You can also do this at any GoTyme Bank kiosk.
+- **Still Locked Out**: Contact support on **0860 999 119** (call or WhatsApp).
+
+#### Discovery Bank
+- **Unable to Authenticate**: If you can't authenticate via the app, you can **phone the bank**. Once the in-app authentication attempt times out, the call is transferred to a banker who can assist you using alternative verification methods.
+- **General Login Help**: Call **0860 100 696** to request a username reminder or reset your password.
+- **New Device**: If you have a new device, download the app, select **"already Bank client"**, and follow the prompts, which include a selfie verification and an OTP.
+
+### 💎 Key Takeaways
+
+1.  **Use the "Forgot PIN/Password" flow first.** This is the fastest self-service method for most lockouts and often uses your registered phone for verification.
+2.  **Call the official fraud or client care line** if the self-service options fail. Have your ID number and account details ready. The correct numbers are listed above.
+3.  **Visit a branch as a last resort.** For issues like a suspended profile or a completely lost 2FA device, an in-person identity verification is often required.
+4.  **Never share your PIN, OTP, or password** with anyone, even if they claim to be from the bank. Your bank will never ask for these details.
+
+I hope this helps you get back into your account quickly. Would you like me to help you draft a summary of your situation to have ready before you call your bank's support line?

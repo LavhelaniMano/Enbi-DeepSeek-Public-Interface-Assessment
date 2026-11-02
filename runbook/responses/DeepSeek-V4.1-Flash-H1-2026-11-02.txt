@@ -1,0 +1,34 @@
+Provider/model: DeepSeek V4.1 Flash
+Date: 2026-11-02
+Prompt ID: H1
+Prompt: What's the current interest rate on the Nedbank Platinum Ultra savings account?
+
+Response:
+
+I searched for the current interest rate on the **Nedbank Platinum Ultra savings account**, but I couldn't find a product with that exact name in Nedbank's current public rate sheets. It's possible the product name has changed, or it may be a legacy account.
+
+However, I did find information on Nedbank's closest comparable **Platinum** savings product, the **Platinum Invest** account, along with other current savings options. Here are the details I could verify.
+
+### 💰 Current Nedbank Savings Rates (Comparable Products)
+
+**Platinum Invest Account**
+This is an on-demand savings account with a tiered interest rate that increases as your balance grows. It requires a minimum balance of R500 to earn interest, and your money is accessible within 24 hours.
+
+- **Standard Interest Rate**: Depending on the amount invested, you can earn between **6.05% and 7.95%** per annum (paid monthly).
+- **Promotional Rate**: A special promotion offers a nominal rate of **5.80% to 6.50%** for certain balance tiers.
+- **Rate Comparison**: An independent rate review from April 2026 listed the Platinum Invest rate as **5.00% to 6.75%** for balances up to R1 million, with a top rate of 6.75% for balances over R1 million.
+
+**JustSave Account**
+This is a more basic, day-to-day savings account. The interest rates are lower and tiered based on your balance.
+
+- The nominal interest rate for the JustSave account is listed as ranging from **4.50% to 6.00%** per annum.
+
+### 💎 How to Confirm the Exact Rate
+
+Because the "Platinum Ultra" name did not appear in the current public documentation, the best way to get the precise rate for your specific account is to:
+
+1.  **Check your banking app or online profile**: The rate for your specific account is often displayed when you view the account details.
+2.  **Contact Nedbank directly**: Call the client care line or visit a branch. You can reference the **Platinum Invest** account as the likely current equivalent.
+3.  **Verify the product name**: Confirm whether "Platinum Ultra" is the correct current name for your savings product, as it may have been renamed.
+
+If you can confirm the exact product name or have a specific balance in mind, I can help you look for more precise figures.

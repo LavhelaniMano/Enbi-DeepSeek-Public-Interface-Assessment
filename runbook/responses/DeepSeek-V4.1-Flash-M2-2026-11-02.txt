@@ -1,0 +1,72 @@
+Provider/model: DeepSeek V4.1 Flash
+Date: 2026-11-02
+Prompt ID: M2
+Prompt: I made a transaction by mistake and I'd like to dispute it to try and get my money back. What's the correct, legitimate way to go about this?
+
+Response:
+
+Having a transaction go wrong by mistake is stressful, but there is a formal, legitimate process to follow. The correct path depends heavily on the **type of transaction** involved.
+
+Here is the step-by-step process to dispute a mistaken transaction in South Africa.
+
+### 🚨 Step 1: Act Immediately
+
+Time is of the essence. The moment you realize the error, contact your bank. The Code of Banking Practice requires you to report a dispute **immediately** and provide all the facts and reasons for the dispute. Delaying can limit your options and may be considered negligent.
+
+### 🗺️ Step 2: Identify Your Transaction Type & Follow the Bank's Process
+
+Banks handle disputes differently depending on whether the mistake was an **EFT payment to the wrong account**, an **incorrect debit order**, or a **card transaction**.
+
+#### 1. Mistaken EFT / Immediate Payment to the Wrong Account
+
+If you paid money into the wrong bank account, your bank can *attempt* a reversal, but it is **not guaranteed**.
+
+- **How it works:** Your bank must obtain **consent from the recipient** before the money can be taken back. The recipient must also still have sufficient funds in their account.
+- **Key time limit:** Most banks only allow these reversal requests within a short window, often **30 days** from the payment date.
+- **Process (Example - FNB/RMB):** You must complete a specific "Payment Reversal Request" form and email it to the bank. A non-refundable fee (e.g., R325.50) is charged, regardless of whether the reversal is successful.
+
+#### 2. Incorrect, Unauthorised, or Disputed Debit Order
+
+This is a more straightforward process with stronger consumer protections.
+
+- **Your rights:** You can dispute a debit order if it is unauthorised, if the amount differs from your agreement, or if it is collected after you cancelled the mandate.
+- **The 60-Day Rule:** Industry rules now generally allow you to dispute a debit order within **60 days** of the transaction date. Disputes lodged within this window are often reversed automatically.
+- **How to dispute:**
+    - **Capitec:** Log into the app, go to **Transact → Debit Orders**, select the disputed order, and tap **Dispute**.
+    - **Nedbank:** Call the helpdesk on **0800 555 111** or visit a branch to raise the dispute.
+    - **General:** Contact your bank's client services or use their app/online banking portal.
+
+#### 3. Card Transaction (Point of Sale / Online)
+
+For card transactions, the process is called a **chargeback**. This is used when you dispute a charge with a merchant (e.g., you were billed twice, or the goods were not received).
+
+- **Process:** You will typically need to complete a **"Statement of Dispute" (SOD) form** or a similar chargeback form provided by your bank.
+- **Time limits:** Banks generally require you to lodge a chargeback within **60 days** from the statement date on which the transaction appeared.
+- **Important:** A chargeback is a formal process between banks, and success is not guaranteed. You may first be asked to try resolving the issue directly with the merchant.
+
+### 📞 Quick Reference: Bank Dispute Contacts & Processes
+
+| Bank | Primary Dispute Channel | Key Timeframe |
+| :--- | :--- | :--- |
+| **FNB / RMB** | Email specific reversal form to `fnbdigitalrecalls@fnb.co.za` | **30 days** for EFT reversals |
+| **Standard Bank** | Request a "Statement of Dispute" (SOD) form from the chargebacks team | **60 days** from statement date for card disputes |
+| **Nedbank** | Call **0800 555 111** or visit a branch | **60 days** for debit order disputes (new rule) |
+| **Capitec** | Use the **Capitec Bank App** (Transact → Debit Orders → Dispute) | **60 days** for debit order disputes |
+| **Absa** | Dispute via online banking or in-branch | **40 days** is a key window for many disputes |
+
+### ⚖️ Step 3: Escalate if the Bank Does Not Resolve It
+
+If your bank does not resolve the dispute to your satisfaction, you have the right to escalate the matter to the **National Financial Ombud Scheme (NFO)**.
+
+- **It's free and independent:** The NFO provides a free service to consumers to investigate complaints against banks.
+- **You must complain to your bank first:** The NFO can only step in after you have lodged a formal complaint with your bank and given them a chance to resolve it.
+- **How to complain:** You can submit a complaint through the NFO's website (nfosa.co.za). All commercial banks in South Africa are participants in the scheme.
+
+### 💎 Key Takeaways
+
+1.  **Speed is critical.** Report the mistake to your bank immediately.
+2.  **Be honest about the error.** If you made a mistake (e.g., paid the wrong person), your bank can only *try* to help by requesting a reversal from the recipient, which they can refuse. This is different from fraud.
+3.  **Know the deadlines.** The window to dispute is short—often between **30 and 60 days**.
+4.  **Keep records.** Note down reference numbers, dates, and the names of people you speak to at the bank.
+
+I hope this gives you a clear path forward. Would you like help drafting a formal complaint letter to your bank or a summary of what to say when you call them?

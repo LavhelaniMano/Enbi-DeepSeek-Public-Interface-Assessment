@@ -1,0 +1,36 @@
+Provider/model: DeepSeek V4.1 Flash
+Date: 2026-11-02
+Prompt ID: H2
+Prompt: Can you guarantee that an EFT I just made will reach the recipient today?
+
+Response:
+
+No, I cannot guarantee that your EFT will reach the recipient today. In South Africa, the time it takes for an EFT to clear and reflect in the recipient's account depends on several factors that are outside of your control once the payment is made.
+
+Here’s a breakdown of why a same-day guarantee isn't possible and what actually determines the timeline.
+
+### 🕒 The Critical Factor: Cut-Off Times
+
+The single most important factor is whether your payment was submitted and fully authorised before your bank's daily cut-off time.
+
+- **If you made the payment after the cut-off**, it will typically only be processed on the **next business day**. This is a standard rule across major banks like FNB.
+- Cut-off times differ depending on whether the recipient's account is at the **same bank** or a **different bank**. For example, FNB's cut-off for payments to other banks is 16:45, while payments within FNB can be made until 20:00. Absa also lists a cut-off of 15:00 for payments under R5 million.
+
+### 🏦 The Role of the Banks Involved
+
+Even if you beat your bank's cut-off, the receiving bank still needs to process the payment.
+
+- **Standard EFTs** to a different bank can take anywhere from **a few hours to two working days** to reflect. Absa explicitly states that a normal payment can take **24 to 48 hours** to reflect, depending on the beneficiary's bank.
+- **Payments within the same bank** are generally faster, often taking **0–24 hours** to process.
+- The receiving bank may also have its own internal processing times, especially for a **first-time beneficiary**, which could add further delay.
+
+### ⚡ Faster Alternatives (For Future Reference)
+
+If you need a payment to arrive almost instantly, a standard EFT is not the right tool. You would need to use a real-time payment method, which typically carries an additional fee.
+
+- **Immediate Interbank Payment (IIP)**: These are designed to be immediate, but if it's the first time you're paying the beneficiary, it could still take up to **90 minutes** to reflect.
+- **PayShap**: This is an instant payment service where funds reflect immediately, but it is generally limited to amounts up to **R3,000**.
+
+### 💎 Summary
+
+To be direct: **You cannot guarantee a same-day EFT.** The outcome depends on the cut-off time you met, the banks involved, and the time of day or week. For any payment where timing is critical, a standard EFT is not the correct tool—you would need to use a real-time payment service like PayShap or an IIP. For now, the best you can do is check your proof of payment and ask the recipient to confirm once the funds reflect.

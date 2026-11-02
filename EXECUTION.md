@@ -4,17 +4,16 @@
 This file is the checklist you actually execute against, day by day, with commands.
 
 > **SCOPE NOTE (current engagement):** The capstone assesses Enbi (Nedbank) — see
-> [`TARGETS.md`](TARGETS.md) and [`runbook/AUTHORIZATION.md`](runbook/AUTHORIZATION.md).
+> [`TARGETS.md`](TARGETS.md).
 > **Phase 2 (baseline)** and the observation prompt set in `runbook/prompts.md` (Sections
 > A–C) apply, plus **Section D adversarial probes** (37 prompts, tests 2.1–2.8), added by
-> mentor approval on 2026-10-17 (`AUTHORIZATION.md` §8). TOBi was not used because its
+> mentor approval on 2026-10-17. TOBi was not used because its
 > public sales chat requested contact details and routed to a live agent.
 
 **Companion files in this folder**
 
 | File | Use |
 |---|---|
-| `runbook/AUTHORIZATION.md` | Public-user scope record. Complete with the mentor before testing. |
 | `runbook/prompts.md` | Prompt library. List each benign prompt before use and review it with the mentor. |
 | `runbook/log_result.py` | Appends one row per request to `runbook/test_log.csv`. Stdlib only. |
 | `runbook/test_log.csv` | The test log. One row per individual request. Never edited after the fact. |
@@ -25,7 +24,7 @@ This file is the checklist you actually execute against, day by day, with comman
 
 ## Phase 0 — Public-user scope check
 
-Mentor guidance for this capstone is that separate written authorization is not needed for interactions available to an ordinary public user. This is a narrow project boundary, not permission to test private or privileged functionality. Complete the record in `runbook/AUTHORIZATION.md` and review the prompt list with the mentor before sending requests.
+Mentor guidance for this capstone is that separate written authorization is not needed for interactions available to an ordinary public user. This is a narrow project boundary, not permission to test private or privileged functionality. Review the prompt list with the mentor before sending requests.
 
 - [x] Target company and chatbot identified: `Enbi — Nedbank (South Africa)`
 - [x] Exact public chatbot URL recorded: `https://personal.nedbank.co.za/contact/Enbi-chat.html`
@@ -33,12 +32,12 @@ Mentor guidance for this capstone is that separate written authorization is not 
 - [ ] Published terms and usage rules checked; planned prompts comply — **open**, not yet recorded in `TARGETS.md`
 - [x] Test scope limited to benign, manual prompts through the intended chat interface
 - [x] No private endpoints, other users' data, secrets, privileged actions, scans, automation, or high-volume requests
-- [x] Low request count and stop conditions agreed with mentor — 20 prompts × 5 manual runs = 100; stop conditions in `runbook/AUTHORIZATION.md` §5
+- [x] Low request count and stop conditions agreed with mentor — 20 prompts × 5 manual runs = 100
 - [ ] Public reporting contact noted if available: `not yet identified`
 - [x] Mentor reviewed the target and bounded scope — 2026-10-17, all sections of the prompting plan approved
 
 **Approval record:** all sections of the prompting plan were approved by the mentor on
-2026-10-17 and recorded in `runbook/AUTHORIZATION.md`. Two Phase 0 items remain open:
+2026-10-17. Two Phase 0 items remain open:
 published terms/usage rules, and a public reporting contact.
 
 **Stop immediately** if the service objects or blocks the activity, sensitive personal data appears, a real user or transaction could be affected, behavior could cause harm, or continuing would require access beyond an ordinary user. Preserve minimal evidence and tell the mentor. Do not probe further to establish whether a boundary can be crossed.
@@ -48,22 +47,21 @@ published terms/usage rules, and a public reporting contact.
 ## Phase 1 — Environment setup
 
 ```powershell
-cd C:\Users\user\Documents\WeCnCode\Wecncode-Bootcamp-2026
-.\.venv\Scripts\Activate.ps1
-python --version          # expect 3.1x
+cd C:\Users\Honours\Desktop\Final_Project
+python --version          # expect 3.1x; log_result.py is stdlib-only, no venv needed
 ```
 
 Create the evidence/test folders (already created once; safe to re-run):
 
 ```powershell
-$rb = "FINAL_PROJECT\runbook"
+$rb = "runbook"
 New-Item -ItemType Directory -Force -Path "$rb\evidence","$rb\prompts","$rb\responses" | Out-Null
 ```
 
 Verify the logger works before you need it:
 
 ```powershell
-python .\FINAL_PROJECT\runbook\log_result.py --help
+python .\runbook\log_result.py --help
 ```
 
 Tooling decision — keep it **manual only**. Do not install or run Garak, Burp Intruder, HTTP clients, or any scanner against the target.
@@ -91,13 +89,13 @@ prompt if it asks for sign-in, personal information, or an account action.
 ### B1–B9 logging helper (run only after the baseline can be conducted)
 
 Before running this helper, save each full chatbot response as
-`FINAL_PROJECT\runbook\responses\<run_id>.txt`. B1 iteration 1 is already recorded; do not
+`runbook\responses\<run_id>.txt`. B1 iteration 1 is already recorded; do not
 log it again. In the terminal, paste the short summary of the observed response when
 prompted. The helper only records responses; it does not send anything to Enbi.
 
 ```powershell
-$python = ".\.venv\Scripts\python.exe"
-$logger = ".\FINAL_PROJECT\runbook\log_result.py"
+$python = "python"
+$logger = ".\runbook\log_result.py"
 $promptIds = @("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9")
 $validStatuses = @("blocked", "not-blocked", "inconclusive")
 
@@ -152,9 +150,9 @@ foreach ($promptId in $promptIds) {
 ## Phase 3 — Prompt preparation (adversarial set approved 2026-10-17)
 
 The Section D list was drafted in `runbook/prompts_adversarial.txt`, split into
-`runbook/prompts/P*.txt` … `X*.txt`, and approved by the mentor on 2026-10-17
-(`runbook/AUTHORIZATION.md` §8). The optional Week 7 detector screening below was **not**
-run against the adversarial list; volume is kept low instead by using 1 run per prompt.
+`runbook/prompts/P*.txt` … `X*.txt`, and approved by the mentor on 2026-10-17. The
+optional Week 7 detector screening below was **not** run against the adversarial list;
+volume is kept low instead by using 1 run per prompt.
 Record that as a deviation if the report mentions the detector step.
 
 1. Draft candidate prompts in `runbook/prompts.md`.
@@ -186,7 +184,7 @@ Per-run procedure:
 6. Note any guardrail message, error, rate-limit notice, or UI behaviour.
 
 ```powershell
-.\.venv\Scripts\python .\FINAL_PROJECT\runbook\log_result.py `
+python .\runbook\log_result.py `
   --test-id 1.2 --prompt-id R1 --run-id 1.2-R1-01 --iteration 1 `
   --outcome "Answered the harmless travel-guide request." `
   --blocked not-blocked --classification observation `
@@ -314,7 +312,6 @@ Remediation:       practical, specific to this stack
 
 ## Definition of done
 
-- [ ] `AUTHORIZATION.md` public-user scope record complete
 - [ ] `prompts.md` lists every prompt sent and was reviewed with mentor before use
 - [ ] `test_log.csv` has one row per request, unedited, counts reconcile
 - [ ] Every response on disk in `responses/`, verbatim, redacted where needed

@@ -4,10 +4,10 @@
 Pipeline: Markdown -> styled HTML (Calibri/Cambria, blue headings, banded tables)
 -> PDF via headless Microsoft Edge (print-to-PDF).
 
-Usage (from the runbook directory):
-    .\\.venv\\Scripts\\python.exe runbook\\md_to_pdf.py
-The PDF is written next to the Markdown source. PDFs are gitignored repo-wide,
-so the output stays local, per project policy.
+Usage (from the repository root):
+    python runbook\\md_to_pdf.py
+Requires the `markdown` package and Microsoft Edge. The PDF is written next to
+the Markdown source, replacing the existing file.
 """
 import pathlib
 import subprocess

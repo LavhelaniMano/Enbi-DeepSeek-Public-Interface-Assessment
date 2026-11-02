@@ -1,7 +1,6 @@
 # Target Options for Mentorship Session
 
-> Select one chatbot with the mentor and document its ordinary public-user interface
-> in [`runbook/AUTHORIZATION.md`](runbook/AUTHORIZATION.md).
+> Select one chatbot with the mentor and document its ordinary public-user interface.
 
 ## Mentor guidance
 
@@ -33,7 +32,6 @@ require access beyond normal public-user functionality.
 4. What benign prompts fit its stated purpose?
 5. What is the public reporting route if unexpected sensitive behavior appears?
 
-Discuss the answers with the mentor and record the decision in
-[`runbook/AUTHORIZATION.md`](runbook/AUTHORIZATION.md). If no suitable public interface
-is available, revise the target with the mentor rather than seeking access to private
-functionality.
+Discuss the answers with the mentor and record the decision. If no suitable public
+interface is available, revise the target with the mentor rather than seeking access to
+private functionality.
