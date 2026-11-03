@@ -33,7 +33,10 @@ datasets/text/        Prompts, CSV logs, and response transcripts
 scripts/              Local logging and PDF-generation utilities
 tests/                Source PDF and screenshots used as evidence
 cybersecurity-notes/  Planning notes, CIA-triad analysis, and prompt-injection notes
+requirements.txt      Python dependencies for the scripts (pypdf is optional)
 ```
+
+Install the Python dependency with `python -m pip install -r requirements.txt`. Building the report additionally needs `pdflatex` from a LaTeX distribution; the logging script has no third-party dependencies.
 
 ## Cybersecurity notes
 

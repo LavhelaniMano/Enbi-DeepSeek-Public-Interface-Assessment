@@ -1,0 +1,16 @@
+# Python dependencies for the project tooling.
+#
+# scripts/log_result.py is standard-library only.
+# scripts/md_to_pdf.py is standard-library only apart from an optional pypdf
+# import that reports the final page count; the PDF is still produced without it.
+#
+# System dependency (not installable with pip): pdflatex from a LaTeX
+# distribution. Tested with MiKTeX 26.5 / MiKTeX-pdfTeX 4.27. See
+# docs/EXECUTION.md for setup.
+#
+# Python 3.10 or newer (tested with 3.14).
+#
+# Install with:
+#   python -m pip install -r requirements.txt
+
+pypdf>=6.0,<7.0
