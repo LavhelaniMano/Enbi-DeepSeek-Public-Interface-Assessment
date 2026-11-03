@@ -17,6 +17,7 @@
 | [`docs/FINAL_REPORT.md`](docs/FINAL_REPORT.md) | Enbi observations and DeepSeek comparison report (2026-11-03) |
 | [`docs/ADVERSARIAL_OBSERVATION_REPORT.md`](docs/ADVERSARIAL_OBSERVATION_REPORT.md) | Detailed adversarial run notes |
 | [`docs/PR_Project_Response.pdf`](docs/PR_Project_Response.pdf) | Capstone media spotlight answering the PR template |
+| [`docs/VIDEO_SCRIPT.md`](docs/VIDEO_SCRIPT.md) | One-minute project introduction script and recording plan |
 | [`datasets/text/llm_comparison_log.csv`](datasets/text/llm_comparison_log.csv) | Separate model-response comparison records |
 | [`cybersecurity-notes/enbi_cia_triad.md`](cybersecurity-notes/enbi_cia_triad.md) | Confidentiality, integrity and availability analysis of the project and the chatbot |
 | [`cybersecurity-notes/enbi_prompt_injection_notes.md`](cybersecurity-notes/enbi_prompt_injection_notes.md) | Prompt-injection and trust-boundary notes from the adversarial runs |
