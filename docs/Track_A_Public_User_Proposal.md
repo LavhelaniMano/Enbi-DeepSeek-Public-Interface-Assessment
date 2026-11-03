@@ -47,7 +47,7 @@ terms and usage rules.
 ## 4. Method and Evidence
 
 1. Open the chatbot in a normal browser as a visitor.
-2. After mentor review, send the benign prompts in `runbook/prompts.md` (Section A) five times each, at a low manual rate.
+2. After mentor review, send the benign prompts in `datasets/text/prompts.md` (Section A) five times each, at a low manual rate.
 3. Save the prompt, the verbatim response, and a timestamp for every run.
 4. Screenshot where useful; redact anything sensitive.
 5. Record refusals, response variance, and visible behaviour without guessing at hidden implementation.

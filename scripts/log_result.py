@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Append one row per request to the Track A test log.
 
 One row = one individual request/response pair. Failed and boring requests get
@@ -43,15 +43,17 @@ AXIS2 = {"finding", "observation", "inconclusive", "not run"}
 BOUNDARY_OUTCOMES = {"1", "2", "3", "4", "5", ""}
 
 HERE = Path(__file__).resolve().parent
+REPO = HERE.parent
+DATA = REPO / "datasets" / "text"
 
 
 def resolve_ref(value: str, *subdirs: str) -> str:
-    """Accept a bare filename and place it under a runbook subdirectory."""
+    """Accept a bare filename and place it under a data subdirectory."""
     if not value:
         return ""
-    candidate = HERE.joinpath(*subdirs, value)
+    candidate = DATA.joinpath(*subdirs, value)
     if candidate.exists():
-        return candidate.relative_to(HERE).as_posix()
+        return candidate.relative_to(DATA).as_posix()
     return value
 
 
@@ -64,14 +66,14 @@ def main() -> int:
     p.add_argument("--run-id", required=True, help="Unique id, e.g. 1.3-I1-01")
     p.add_argument("--test-id", required=True, help="1.1 - 1.4")
     p.add_argument("--prompt-id", required=True, help="e.g. B1, R1, V1, F1")
-    p.add_argument("--prompt-file", default="", help="Filename in runbook/prompts/ or full text")
+    p.add_argument("--prompt-file", default="", help="Filename in datasets/text/prompts/ or datasets/text/")
     p.add_argument("--iteration", type=int, default=1)
     p.add_argument("--account-context", default="anonymous")
-    p.add_argument("--response-file", default="", help="Filename in runbook/responses/")
+    p.add_argument("--response-file", default="", help="Filename in datasets/text/responses/")
     p.add_argument(
         "--log-file",
         default="test_log.csv",
-        help="CSV filename in the runbook directory (default: test_log.csv)",
+        help="CSV filename in datasets/text/ (default: test_log.csv)",
     )
     p.add_argument("--outcome", required=True, help="Short summary of what came back")
     p.add_argument("--guardrail", default="", help="Guardrail message or refusal type, if visible")
@@ -93,7 +95,7 @@ def main() -> int:
         choices=sorted(BOUNDARY_OUTCOMES - {""}),
         help="Trust-boundary outcome 1-5, only if classification=finding",
     )
-    p.add_argument("--evidence-file", default="", help="Screenshot in runbook/evidence/")
+    p.add_argument("--evidence-file", default="", help="Screenshot in tests/evidence/")
     p.add_argument("--notes", default="")
     args = p.parse_args()
 
@@ -105,11 +107,11 @@ def main() -> int:
     prompt_ref = args.prompt_file
     prompt_hash = ""
     if prompt_ref:
-        prompt_path = HERE / "prompts" / prompt_ref
+        prompt_path = DATA / "prompts" / prompt_ref
         if not prompt_path.exists():
-            prompt_path = HERE / prompt_ref
+            prompt_path = DATA / prompt_ref
         if prompt_path.exists():
-            prompt_ref = prompt_path.relative_to(HERE).as_posix()
+            prompt_ref = prompt_path.relative_to(DATA).as_posix()
             prompt_hash = sha256_of(prompt_path.read_text(encoding="utf-8"))
         else:
             prompt_hash = sha256_of(args.prompt_file)
@@ -129,13 +131,17 @@ def main() -> int:
         "axis1_blocked": args.blocked,
         "axis2_classification": args.classification,
         "outcome_crossed": args.outcome_crossed,
-        "evidence_file": resolve_ref(args.evidence_file, "evidence"),
+        "evidence_file": (
+            (Path("..") / ".." / "tests" / "evidence" / args.evidence_file).as_posix()
+            if args.evidence_file
+            else ""
+        ),
         "notes": args.notes.replace("\n", " ").strip(),
     }
 
-    log_path = HERE / args.log_file
-    if log_path.parent.resolve() != HERE.resolve():
-        p.error("--log-file must be a filename in the runbook directory")
+    log_path = DATA / args.log_file
+    if log_path.parent.resolve() != DATA.resolve():
+        p.error("--log-file must be a filename in datasets/text/")
     is_new = not log_path.exists()
     with log_path.open("a", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=FIELDS)

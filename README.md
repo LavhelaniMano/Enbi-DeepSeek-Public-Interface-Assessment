@@ -1,27 +1,54 @@
 # Final Capstone Project README
 
-> **This file is the scope and methodology document.** For the actual step-by-step
+> **This file is the project overview.** For the step-by-step
 > runbook — public-user scope record, environment setup, commands, prompt library, logging,
-> classification, reporting and disclosure — see **[`EXECUTION.md`](EXECUTION.md)**.
+> classification, reporting and disclosure — see **[`docs/EXECUTION.md`](docs/EXECUTION.md)**.
 
 | Document | Purpose |
 |---|---|
 | `README.md` | Scope, methodology, constraints, deliverables (this file) |
-| `EXECUTION.md` | Day-by-day runbook with commands and checklists |
-| `Track_A_Red_Team_Proposal_Trimmed.md` | Rationale, target-selection criteria, one-week plan |
-| `Track_A_Public_User_Proposal.md` | Observation-study proposal, written before the 2026-10-17 scope amendment; superseded by that amendment |
-| `TARGETS.md` | Selected target (Enbi), access record, and observation result |
-| `TARGET_OPTIONS.md` | Target options and questions from the mentorship session |
-| `runbook/prompts.md` | Benign observation prompt library and testing checklist |
-| `runbook/log_result.py` | Logger; writes one row per request to `runbook/test_log.csv` |
-| [`FINAL_REPORT.md`](FINAL_REPORT.md) | Consolidated report of completed benign and adversarial observations, evidence, and limitations |
+| [`docs/EXECUTION.md`](docs/EXECUTION.md) | Runbook, procedures, and reporting checklist |
+| [`docs/Track_A_Red_Team_Proposal_Trimmed.md`](docs/Track_A_Red_Team_Proposal_Trimmed.md) | Project rationale and target-selection criteria |
+| [`docs/Track_A_Public_User_Proposal.md`](docs/Track_A_Public_User_Proposal.md) | Earlier proposal, superseded by the scope amendment |
+| [`docs/TARGETS.md`](docs/TARGETS.md) | Selected target and access record |
+| [`docs/TARGET_OPTIONS.md`](docs/TARGET_OPTIONS.md) | Target options and mentorship notes |
+| [`datasets/text/prompts.md`](datasets/text/prompts.md) | Prompt library |
+| [`scripts/log_result.py`](scripts/log_result.py) | Local logger for completed observations |
+| [`docs/FINAL_REPORT.md`](docs/FINAL_REPORT.md) | Enbi observations and DeepSeek comparison report (2026-11-03) |
+| [`docs/ADVERSARIAL_OBSERVATION_REPORT.md`](docs/ADVERSARIAL_OBSERVATION_REPORT.md) | Detailed adversarial run notes |
+| [`docs/PR_Project_Response.pdf`](docs/PR_Project_Response.pdf) | Capstone media spotlight answering the PR template |
+| [`datasets/text/llm_comparison_log.csv`](datasets/text/llm_comparison_log.csv) | Separate model-response comparison records |
+| [`cybersecurity-notes/enbi_cia_triad.md`](cybersecurity-notes/enbi_cia_triad.md) | Confidentiality, integrity and availability analysis of the project and the chatbot |
+| [`cybersecurity-notes/enbi_prompt_injection_notes.md`](cybersecurity-notes/enbi_prompt_injection_notes.md) | Prompt-injection and trust-boundary notes from the adversarial runs |
+| [`cybersecurity-notes/deepseek_cia_triad.md`](cybersecurity-notes/deepseek_cia_triad.md) | Confidentiality, integrity and availability analysis of the DeepSeek comparison |
+| [`cybersecurity-notes/deepseek_prompt_injection_notes.md`](cybersecurity-notes/deepseek_prompt_injection_notes.md) | DeepSeek instruction-extraction, obfuscation and request-splitting notes |
+
+
+## Repository layout
+
+```text
+docs/                 Project documentation and report PDFs
+datasets/text/        Prompts, CSV logs, and response transcripts
+scripts/              Local logging and PDF-generation utilities
+tests/                Source PDF and screenshots used as evidence
+cybersecurity-notes/  Planning notes, CIA-triad analysis, and prompt-injection notes
+```
+
+## Cybersecurity notes
+
+Four short analyses sit alongside the runbook and the report — two for the Enbi target and two for the DeepSeek comparison:
+
+- [**Enbi and the CIA Triad**](cybersecurity-notes/enbi_cia_triad.md) — how confidentiality, integrity, and availability apply to the observation method and to a public banking assistant, with concrete improvements for each principle.
+- [**Prompt Injection and Trust Boundaries in the Enbi Study**](cybersecurity-notes/enbi_prompt_injection_notes.md) — what the P, S, D, M, O, H, W, and X prompt groups were designed to test, what the completed Enbi runs actually show, and which controls would matter in production.
+- [**DeepSeek V4.1 Flash and the CIA Triad**](cybersecurity-notes/deepseek_cia_triad.md) — the same three principles applied to the comparison track: what leaves the machine, where the transcripts live, and why a hosted version is a dated snapshot rather than a benchmark.
+- [**Prompt Injection and Trust Boundaries in the DeepSeek Comparison**](cybersecurity-notes/deepseek_prompt_injection_notes.md) — instruction extraction, encoding and language switching, claimed authority, request-splitting (A1/A2), context bleed, and the overclaiming risk that matters more than jailbreaking.
 
 ## Project title
 Track A — Red Team Assessment of the Enbi Chatbot
 
 > **Current scope:** Enbi (Nedbank) is the selected target, tested through its public
 > website chat only. Two approved phases are running: a benign observation study
-> (Sections A–C of `runbook/prompts.md`) and an adversarial probe set (Section D, 37
+> (Sections A–C of `datasets/text/prompts.md`) and an adversarial probe set (Section D, 37
 > prompts) added by mentor approval on 2026-10-17. Never
 > enter real account or personal details. TOBi was not used because its sales chat
 > requested contact details and routed to a live agent.
@@ -50,13 +77,13 @@ We will use Enbi through its ordinary public-facing chat as a visitor, with beni
 We will assess one chatbot that is:
 - available on the Nedbank public website
 - available to an ordinary public user through its intended interface
-- selected with the mentor, with the exact URL and visitor access context recorded in [TARGETS.md](TARGETS.md)
+- selected with the mentor, with the exact URL and visitor access context recorded in [docs/TARGETS.md](docs/TARGETS.md)
 
 ### Out of scope
 The following are outside this project:
 - attacking unrelated systems
 - accessing private APIs, administrative interfaces, or other users' accounts or data
-- requesting real credentials, secrets, or another user's data (system-prompt requests appear only as the Section D refusal probes listed in `runbook/prompts.md`)
+- requesting real credentials, secrets, or another user's data (system-prompt requests appear only as the Section D refusal probes listed in `datasets/text/prompts.md`)
 - triggering real purchases, account changes, external actions, or other consequential operations
 - indirect prompt injection using third-party content, or modifying a live knowledge base
 - scanning, automation, high-volume requests, denial-of-service, or bypassing access controls

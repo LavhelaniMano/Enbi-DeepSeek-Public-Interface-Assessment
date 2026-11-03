@@ -36,20 +36,20 @@ param(
 
 $ErrorActionPreference = "Stop"
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
-$repo = (Resolve-Path (Join-Path $here "..\..")).Path
-$python = Join-Path $repo ".venv\Scripts\python.exe"
+$repo = (Resolve-Path (Join-Path $here "..")).Path
+$python = (Get-Command python -ErrorAction Stop).Source
 $logger = Join-Path $here "log_result.py"
 
 if (-not (Test-Path -LiteralPath $python)) { throw "Python not found at $python" }
 if (-not (Test-Path -LiteralPath $logger)) { throw "Logger not found at $logger" }
-if (-not (Test-Path -LiteralPath (Join-Path $here $PromptFile))) {
+if (-not (Test-Path -LiteralPath (Join-Path $repo "datasets\text\$PromptFile"))) {
   throw "Prompt file not found: $PromptFile"
 }
-if (-not (Test-Path -LiteralPath (Join-Path $here "responses\$ResponseFile"))) {
-  throw "Response file not found: responses\$ResponseFile"
+if (-not (Test-Path -LiteralPath (Join-Path $repo "datasets\text\responses\$ResponseFile"))) {
+  throw "Response file not found: datasets\text\responses\$ResponseFile"
 }
-if ($EvidenceFile -and -not (Test-Path -LiteralPath (Join-Path $here "evidence\$EvidenceFile"))) {
-  throw "Evidence file not found: evidence\$EvidenceFile"
+if ($EvidenceFile -and -not (Test-Path -LiteralPath (Join-Path $repo "tests\evidence\$EvidenceFile"))) {
+  throw "Evidence file not found: tests\evidence\$EvidenceFile"
 }
 
 $testGroup = switch -Regex ($Prompt) {

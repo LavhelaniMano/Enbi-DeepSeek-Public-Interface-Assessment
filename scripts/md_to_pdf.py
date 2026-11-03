@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 """Render FINAL_REPORT.md as a LaTeX-typeset PDF.
 
 Pipeline: Markdown -> LaTeX (article class, Latin Modern, booktabs tables,
@@ -8,7 +8,7 @@ serif, justified text, indented paragraphs, rule-based tables and
 numbered-free section headings.
 
 Usage (from the repository root):
-    python runbook\\md_to_pdf.py
+    python scripts\\md_to_pdf.py
 Requires a TeX distribution on PATH (pdflatex) with the packages listed in
 PREAMBLE. The PDF is written next to the Markdown source, replacing the
 existing file. Intermediate files are written to a temporary directory and
@@ -24,8 +24,10 @@ import sys
 import tempfile
 
 HERE = pathlib.Path(__file__).resolve().parent
-SRC = HERE.parent / "FINAL_REPORT.md"
-OUT = HERE.parent / "FINAL_REPORT.pdf"
+REPO = HERE.parent
+DOCS = REPO / "docs"
+SRC = DOCS / "FINAL_REPORT.md"
+OUT = DOCS / "FINAL_REPORT.pdf"
 
 PREAMBLE = r"""
 \documentclass[11pt,a4paper]{article}
@@ -162,14 +164,19 @@ def render_table(rows: list[str]) -> str:
 
 
 def render_paragraph(lines: list[str], centred: bool = False) -> str:
-    parts: list[str] = []
-    for idx, raw in enumerate(lines):
-        hard_break = raw.endswith("  ")
-        piece = inline(raw.strip())
-        if hard_break and idx < len(lines) - 1:
-            piece += r" \\"
-        parts.append(piece)
-    body = "\n".join(parts)
+    # Join wrapped lines before inline conversion so bold/italic spans that
+    # cross a line boundary are still recognised. Markdown hard breaks (two
+    # trailing spaces) become LaTeX line breaks between segments.
+    segments: list[str] = []
+    current: list[str] = []
+    for raw in lines:
+        current.append(raw.strip())
+        if raw.endswith("  "):
+            segments.append(" ".join(current).strip())
+            current = []
+    if current:
+        segments.append(" ".join(current).strip())
+    body = r" \\".join(inline(segment) for segment in segments)
     if centred:
         return "\\begin{center}\\small\n" + body + "\n\\end{center}"
     if len(lines) == 1 and re.fullmatch(r"\*\*[^*]+\*\*", lines[0].strip()):
@@ -318,7 +325,7 @@ def main() -> int:
     tex = build_tex(SRC.read_text(encoding="utf-8"))
     with tempfile.TemporaryDirectory(prefix="report-tex-") as tmp:
         build = pathlib.Path(tmp)
-        tex_path = HERE.parent / "FINAL_REPORT_build.tex"
+        tex_path = DOCS / "FINAL_REPORT_build.tex"
         tex_path.write_text(tex, encoding="utf-8")
         try:
             cmd = [
@@ -331,7 +338,13 @@ def main() -> int:
             ]
             for _ in range(2):
                 r = subprocess.run(
-                    cmd, cwd=HERE.parent, capture_output=True, text=True, timeout=300
+                    cmd,
+                    cwd=DOCS,
+                    capture_output=True,
+                    text=True,
+                    encoding="cp1252",
+                    errors="replace",
+                    timeout=300,
                 )
                 if r.returncode != 0:
                     log = build / "FINAL_REPORT_build.log"

@@ -10,7 +10,7 @@ refusals deliberately; it uses dummy values only and stays inside the same publi
 
 1. Only prompts listed here are sent.
 2. Sections A–C are benign and non-sensitive. Section D probes refusals but uses dummy values only (`0000` PIN, `[dummy name]`, all-zero ID). Never submit real personal data or credentials.
-3. Run each prompt manually, at a low rate. Repetition targets follow the lean plan in `runbook/BASELINE_PLAN.md` (time-constrained mode, 2026-10-17): B5 runs 5 times, B6–B9 and C4–C8 once each, C1–C3 already complete at 1 each, T1–T3 three times each, Section D once each.
+3. Run each prompt manually, at a low rate. Repetition targets follow the lean plan in `cybersecurity-notes/BASELINE_PLAN.md` (time-constrained mode, 2026-10-17): B5 runs 5 times, B6–B9 and C4–C8 once each, C1–C3 already complete at 1 each, T1–T3 three times each, Section D once each.
 4. Save every response verbatim, successes and refusals alike.
 5. Log each run with `log_observation.ps1` (or `log_result.py`) using its prompt ID.
 6. Stop if sensitive data appears, the service objects, or the next step needs private access.
@@ -145,6 +145,6 @@ If a test is not in Sections A–D above, it is not part of this study.
 
 - [ ] Enbi's public URL and usage rules confirmed and recorded in `TARGETS.md`
 - [x] Prompt list reviewed with mentor (2026-10-17 — all sections approved)
-- [x] Repetition count set — lean plan 2026-10-17 (see `runbook/BASELINE_PLAN.md`): B1–B4 at 5 runs each as the variance reference, B5 at 5, B6–B9 / C4–C8 / Section D at 1 each, T1–T3 at 3 each; manual/low-volume kept
+- [x] Repetition count set — lean plan 2026-10-17 (see `cybersecurity-notes/BASELINE_PLAN.md`): B1–B4 at 5 runs each as the variance reference, B5 at 5, B6–B9 / C4–C8 / Section D at 1 each, T1–T3 at 3 each; manual/low-volume kept
 - [ ] Evidence and redaction handling agreed
 - [ ] No prompt here does anything beyond ordinary public use

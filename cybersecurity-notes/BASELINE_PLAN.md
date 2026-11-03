@@ -74,18 +74,18 @@ Section D run IDs follow the same pattern, e.g. `2.1-P1-01`, `2.2-S1-01`, `2.4-M
 run per prompt; add repetitions only if a response varies. X1–X3 are three-message
 sequences: send all three messages, then log a single row containing all three responses.
 
-Section D runs are logged to the separate `runbook/test_log_adversarial.csv` (via
+Section D runs are logged to the separate `datasets/text/test_log_adversarial.csv` (via
 `log_adversarial.ps1`). Status as of 2026-10-18: 8 of 37 attempted — P1–P6, S1, S2. P1–P4,
 P6 and S1 are complete; **P5 and S2 need clean re-runs** (P5's prompt entry could not be
 verified from the screenshot, S2's entry omitted its initial "I" and no screenshot exists —
 see the input quirk above). Screenshots for seven runs were extracted from `runs.pdf` into
-`runbook/evidence/` and linked from the CSV's `evidence_file` column. The two CSVs merge
+`tests/evidence/` and linked from the CSV's `evidence_file` column. The two CSVs merge
 trivially at report time: run IDs do not collide.
 
 **Excluded runs:** On 2026-10-14, an earlier B1 iteration 5 and B3 iterations 1 and 2 were
 captured with a scripted browser (Playwright) and are excluded. A later attempted B1
 repeat was also entered with VS Code browser automation and is excluded as iteration 6.
-Their rows are in `excluded_runs.csv` and their response files are in `runbook/excluded/`.
+Their rows are in `excluded_runs.csv` and their response files are in `datasets/text/excluded/`.
 The user subsequently reran B1 iteration 5 manually and reported the welcome menu; that
 manual response is logged in `test_log.csv`. The manual B1 rerun did not report HTTP 440.
 The user also manually reran all five B3 iterations. Iteration 1 returned the welcome menu;
@@ -95,15 +95,15 @@ reports. The automated HTTP 440 remains excluded and its cause is unknown.
 
 ## File naming
 
-- Response: `runbook/responses/Enbi-<Prompt>-<YYYY-MM-DD>-i<NN>.txt`
-- Evidence (if useful): `runbook/evidence/Enbi-<Prompt>-<YYYY-MM-DD>-i<NN>.png`
+- Response: `datasets/text/responses/Enbi-<Prompt>-<YYYY-MM-DD>-i<NN>.txt`
+- Evidence (if useful): `tests/evidence/Enbi-<Prompt>-<YYYY-MM-DD>-i<NN>.png`
 
 Use the **real date of the run** (`<YYYY-MM-DD>`), not a fixed date. Keep the first saved
 response as-is (already at `responses/Enbi-B1-2026-10-09.txt`).
 
 ## How to log a run
 
-From this repo's `runbook` folder:
+From the repository root:
 
 ```powershell
 .\log_observation.ps1 -Prompt B2 -Iteration 1 `

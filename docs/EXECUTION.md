@@ -1,24 +1,24 @@
-﻿# EXECUTION.md — Runbook for Track A Red Team Assessment
+# EXECUTION.md — Runbook for Track A Red Team Assessment
 
 **Purpose:** operational companion to `README.md` (scope/methodology) and `Track_A_Red_Team_Proposal_Trimmed.md` (rationale).
 This file is the checklist you actually execute against, day by day, with commands.
 
 > **SCOPE NOTE (current engagement):** The capstone assesses Enbi (Nedbank) — see
 > [`TARGETS.md`](TARGETS.md).
-> **Phase 2 (baseline)** and the observation prompt set in `runbook/prompts.md` (Sections
+> **Phase 2 (baseline)** and the observation prompt set in `datasets/text/prompts.md` (Sections
 > A–C) apply, plus **Section D adversarial probes** (37 prompts, tests 2.1–2.8), added by
 > mentor approval on 2026-10-17. TOBi was not used because its
 > public sales chat requested contact details and routed to a live agent.
 
-**Companion files in this folder**
+**Companion files in the repository**
 
 | File | Use |
 |---|---|
-| `runbook/prompts.md` | Prompt library. List each benign prompt before use and review it with the mentor. |
-| `runbook/log_result.py` | Appends one row per request to `runbook/test_log.csv`. Stdlib only. |
-| `runbook/test_log.csv` | The test log. One row per individual request. Never edited after the fact. |
-| `runbook/responses/` | Raw response text, one `.txt` per request, named by `run_id`. |
-| `runbook/evidence/` | Screenshots and evidence, with sensitive content redacted. |
+| `datasets/text/prompts.md` | Prompt library. List each benign prompt before use and review it with the mentor. |
+| `scripts/log_result.py` | Appends one row per request to `datasets/text/test_log.csv`. Stdlib only. |
+| `datasets/text/test_log.csv` | The test log. One row per individual request. Never edited after the fact. |
+| `datasets/text/responses/` | Raw response text, one `.txt` per request, named by `run_id`. |
+| `tests/evidence/` | Screenshots and evidence, with sensitive content redacted. |
 
 ---
 
@@ -32,7 +32,7 @@ Mentor guidance for this capstone is that separate written authorization is not 
 - [ ] Published terms and usage rules checked; planned prompts comply — **open**, not yet recorded in `TARGETS.md`
 - [x] Test scope limited to benign, manual prompts through the intended chat interface
 - [x] No private endpoints, other users' data, secrets, privileged actions, scans, automation, or high-volume requests
-- [x] Low request count and stop conditions agreed with mentor — 20 prompts × 5 manual runs = 100
+- [x] Low request count and stop conditions agreed with mentor — 120 planned prompt runs (83 baseline + 37 adversarial)
 - [ ] Public reporting contact noted if available: `not yet identified`
 - [x] Mentor reviewed the target and bounded scope — 2026-10-17, all sections of the prompting plan approved
 
@@ -54,21 +54,21 @@ python --version          # expect 3.1x; log_result.py is stdlib-only, no venv n
 Create the evidence/test folders (already created once; safe to re-run):
 
 ```powershell
-$rb = "runbook"
-New-Item -ItemType Directory -Force -Path "$rb\evidence","$rb\prompts","$rb\responses" | Out-Null
+$rb = "datasets\text"
+New-Item -ItemType Directory -Force -Path "$rb\prompts","$rb\responses","tests\evidence" | Out-Null
 ```
 
 Verify the logger works before you need it:
 
 ```powershell
-python .\runbook\log_result.py --help
+python .\scripts\log_result.py --help
 ```
 
 Tooling decision — keep it **manual only**. Do not install or run Garak, Burp Intruder, HTTP clients, or any scanner against the target.
 
 | Need | Default tool | Notes |
 |---|---|---|
-| Capture a response | copy the visible chatbot response â†’ save to `responses/<run_id>.txt` | keep it verbatim; redact before sharing |
+| Capture a response | copy the visible chatbot response → save to `responses/<run_id>.txt` | keep it verbatim; redact before sharing |
 | Screenshot | Win+Shift+S | name `<run_id>_<test_id>.png` |
 | Offline prompt screening | Your Week 7 detector notebook | local only, never pointed at the target |
 
@@ -78,10 +78,10 @@ Do not replay requests with scripts or exported cURL. Use the normal chatbot int
 
 ## Phase 2 — Baseline (test 1.1)
 
-**Current status:** The runbook tracks baseline prompts B1-B9. Check `runbook/BASELINE_PLAN.md` and `runbook/test_log.csv` for current counts. B1–B4 are complete at 5 runs each — they are the study's variance reference. B5 has 3 of 5. Security-awareness prompts B6-B9 observe public safety guidance only; they do not test security controls.
+**Current status:** The runbook tracks baseline prompts B1-B9. Check `cybersecurity-notes/BASELINE_PLAN.md` and `datasets/text/test_log.csv` for current counts. B1–B4 are complete at 5 runs each — they are the study's variance reference. B5 has 3 of 5. Security-awareness prompts B6-B9 observe public safety guidance only; they do not test security controls.
 
 For any remaining manual baseline collection, use the lean repetition plan recorded in
-`runbook/BASELINE_PLAN.md` (time-constrained mode, 2026-10-17): B5 iterations 4–5, B6–B9
+`cybersecurity-notes/BASELINE_PLAN.md` (time-constrained mode, 2026-10-17): B5 iterations 4–5, B6–B9
 once each, C4–C8 once each, T1–T3 iterations 2–3. Log every response. Injection and
 guardrail probes are Section D only — they are not part of baseline collection. Stop a
 prompt if it asks for sign-in, personal information, or an account action.
@@ -89,13 +89,13 @@ prompt if it asks for sign-in, personal information, or an account action.
 ### B1–B9 logging helper (run only after the baseline can be conducted)
 
 Before running this helper, save each full chatbot response as
-`runbook\responses\<run_id>.txt`. B1 iteration 1 is already recorded; do not
+`datasets\text\responses\<run_id>.txt`. B1 iteration 1 is already recorded; do not
 log it again. In the terminal, paste the short summary of the observed response when
 prompted. The helper only records responses; it does not send anything to Enbi.
 
 ```powershell
 $python = "python"
-$logger = ".\runbook\log_result.py"
+$logger = ".\scripts\log_result.py"
 $promptIds = @("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9")
 $validStatuses = @("blocked", "not-blocked", "inconclusive")
 
@@ -149,13 +149,13 @@ foreach ($promptId in $promptIds) {
 
 ## Phase 3 — Prompt preparation (adversarial set approved 2026-10-17)
 
-The Section D list was drafted in `runbook/prompts_adversarial.txt`, split into
-`runbook/prompts/P*.txt` … `X*.txt`, and approved by the mentor on 2026-10-17. The
+The Section D list was drafted in `datasets/text/prompts_adversarial.txt`, split into
+`datasets/text/prompts/P*.txt` … `X*.txt`, and approved by the mentor on 2026-10-17. The
 optional Week 7 detector screening below was **not** run against the adversarial list;
 volume is kept low instead by using 1 run per prompt.
 Record that as a deviation if the report mentions the detector step.
 
-1. Draft candidate prompts in `runbook/prompts.md`.
+1. Draft candidate prompts in `datasets/text/prompts.md`.
 2. *(not performed)* Run each through the **Week 7 detector locally**. Drop any prompt the detector already blocks confidently.
 3. Review the final list with the mentor and check it against the public-user scope and site's published rules. **Done — 2026-10-17.**
 4. Keep the final checklist short and low-volume. Do not exceed the manual test plan.
@@ -184,7 +184,7 @@ Per-run procedure:
 6. Note any guardrail message, error, rate-limit notice, or UI behaviour.
 
 ```powershell
-python .\runbook\log_result.py `
+python .\scripts\log_result.py `
   --test-id 1.2 --prompt-id R1 --run-id 1.2-R1-01 --iteration 1 `
   --outcome "Answered the harmless travel-guide request." `
   --blocked not-blocked --classification observation `
@@ -223,10 +223,10 @@ A result that succeeds 1 time in 10 is reported as **unreliable**, not as a bypa
 ## Phase 6 — Verification
 
 - [ ] Re-run a selected subset only through the public interface and within the low-volume plan.
-- [ ] Results that will not reproduce â†’ `inconclusive`, not "probably real".
+- [ ] Results that will not reproduce → `inconclusive`, not "probably real".
 - [ ] Verify every response set is on disk — successes *and* failures.
 - [ ] Confirm no row was edited after capture (`git diff` on `test_log.csv` should be empty after the final commit).
-- [ ] Verify no secrets or personal data are in `runbook/` without redaction.
+- [ ] Verify no secrets or personal data are in `datasets/text/` without redaction.
 - [ ] Reconcile: `planned = executed + not run` for every test ID.
 
 ---
@@ -254,8 +254,8 @@ Test ID / prompt:  1.3 / D3
 Observed behavior:
 Severity:          [Critical/High/Medium/Low/Informational] — rationale:
 Scope:             normal public-user interaction through <exact URL>
-Reproduction:      <exact prompt> â†’ <what happened>, N/M runs
-Evidence:          runbook/responses/<run_id>.txt, runbook/evidence/<file>.png
+Reproduction:      <exact prompt> → <what happened>, N/M runs
+Evidence:          datasets/text/responses/<run_id>.txt, tests/evidence/<file>.png
 Boundary:          what the system was built to protect, and how this crossed it
 Not tested:        related surfaces deliberately left alone, and why
 Remediation:       practical, specific to this stack

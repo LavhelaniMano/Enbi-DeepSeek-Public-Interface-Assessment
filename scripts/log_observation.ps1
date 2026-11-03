@@ -1,11 +1,11 @@
-<#
+﻿<#
 .SYNOPSIS
   Log one public-observation run for the Track A study of Enbi.
 
 .DESCRIPTION
-  Thin wrapper around runbook/log_result.py. It derives the test ID from the
+  Thin wrapper around log_result.py. It derives the test ID from the
   prompt prefix (B=1.1, C=1.2, T=1.3), builds the run ID, points at the prompt
-  file in runbook/prompts/, and appends one row to runbook/test_log.csv.
+  file in datasets/text/prompts/, and appends one row to datasets/text/test_log.csv.
 
   Run this AFTER you have actually captured a real response. Do not invent
   outcomes; every row must correspond to a real interaction.
@@ -32,8 +32,8 @@ param(
 
 $ErrorActionPreference = "Stop"
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
-$repo = (Resolve-Path (Join-Path $here "..\..")).Path
-$python = Join-Path $repo ".venv\Scripts\python.exe"
+$repo = (Resolve-Path (Join-Path $here "..")).Path
+$python = (Get-Command python -ErrorAction Stop).Source
 $logger = Join-Path $here "log_result.py"
 
 if (-not (Test-Path -LiteralPath $python)) { throw "Python not found at $python" }
@@ -57,8 +57,8 @@ switch -Regex ($Prompt) {
 $runId = "{0}-{1}-{2:D2}" -f $testId, $Prompt, $Iteration
 $promptFile = "$Prompt.txt"
 
-if (-not (Test-Path -LiteralPath (Join-Path $here "prompts\$promptFile"))) {
-  throw "Prompt file not found: prompts\$promptFile"
+if (-not (Test-Path -LiteralPath (Join-Path $repo "datasets\text\prompts\$promptFile"))) {
+  throw "Prompt file not found: datasets\text\prompts\$promptFile"
 }
 
 $logArgs = @(

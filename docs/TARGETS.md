@@ -2,7 +2,7 @@
 
 ## Scope of this record
 
-This capstone assesses a single chatbot through its normal, intended public interface. It has two phases: a **public observation study** (how the chatbot behaves for an ordinary visitor) and, since the mentor approval of 2026-10-17, an **adversarial probe set** (`runbook/prompts.md` Section D — instruction-override, social-engineering, sensitive-data-handling, fraud-assistance, obfuscation, overclaiming, safety and multi-turn prompts).
+This capstone assesses a single chatbot through its normal, intended public interface. It has two phases: a **public observation study** (how the chatbot behaves for an ordinary visitor) and, since the mentor approval of 2026-10-17, an **adversarial probe set** (`datasets/text/prompts.md` Section D — instruction-override, social-engineering, sensitive-data-handling, fraud-assistance, obfuscation, overclaiming, safety and multi-turn prompts).
 
 No prompt accesses another user's data, triggers a real action, or reaches beyond the public page. Real credentials, secrets, automation and account actions remain out of scope.
 
@@ -24,15 +24,15 @@ public questions directly without an immediate hand-off, which suits an observat
 
 | Chatbot | Owner / service | Notes |
 |---|---|---|
-| TOBi / SuperTOBi | Vodacom (SA) | Public chat currently asks for a mobile number and SMS verification before use. On 2026-10-09, the user reported that after they provided a number and email it transferred to a human agent. That handoff was not re-enacted for this observation. Current entry screenshot: `runbook/evidence/TOBi-public-phone-required-2026-10-14.png`. |
+| TOBi / SuperTOBi | Vodacom (SA) | Public chat currently asks for a mobile number and SMS verification before use. On 2026-10-09, the user reported that after they provided a number and email it transferred to a human agent. That handoff was not re-enacted for this observation. Current entry screenshot: `tests/evidence/TOBi-public-phone-required-2026-10-14.png`. |
 
 ## TOBi public-entry observation (2026-10-14)
 
 The public TOBi sales-chat page displayed a “Welcome to TOBi” prompt requesting a mobile
 number, with a Continue button and notice that continuing agrees to receive an SMS
 verification code. No number was entered and no Continue action was taken during this
-capture. See `runbook/responses/TOBi-public-entry-2026-10-14.txt` and
-`runbook/evidence/TOBi-public-phone-required-2026-10-14.png`.
+capture. See `datasets/text/responses/TOBi-public-entry-2026-10-14.txt` and
+`tests/evidence/TOBi-public-phone-required-2026-10-14.png`.
 
 The separate live-agent handoff is user-reported from 2026-10-09, after the user supplied
 their own contact details. There is no screenshot of that handoff in this evidence set;
@@ -46,7 +46,7 @@ SMS verification again.
 | 1 | Batho Pele AI Chatbot | DPSA / public service |
 | 2 | Chat.co.za | Chat.co.za |
 | 3 | Chatbotz / chatbot.co.za | Chatbotz |
-| 4 | ChatBunny | ChatBunny.org; attempted public access on 2026-10-14, but the page failed to render and `/signup` returned 404. No registration was completed. See `runbook/responses/ChatBunny-public-access-2026-10-14.txt`. |
+| 4 | ChatBunny | ChatBunny.org; attempted public access on 2026-10-14, but the page failed to render and `/signup` returned 404. No registration was completed. See `datasets/text/responses/ChatBunny-public-access-2026-10-14.txt`. |
 
 ## Selection checks (reading only — completed before testing began)
 

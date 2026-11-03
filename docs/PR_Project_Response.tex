@@ -1,0 +1,179 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=22mm,headheight=15pt]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+
+\definecolor{nedbankgreen}{HTML}{008A52}
+\definecolor{ink}{HTML}{18312A}
+\definecolor{softgreen}{HTML}{EAF5EF}
+\hypersetup{colorlinks=true,linkcolor=nedbankgreen,urlcolor=nedbankgreen}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=2pt,topsep=3pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Wecncode Bootcamp \textbullet{} S2026}
+\fancyhead[R]{\small Capstone spotlight}
+\fancyfoot[C]{\thepage}
+
+\newcommand{\sectiontitle}[1]{\vspace{5pt}{\large\bfseries\color{nedbankgreen}#1}\par\vspace{1pt}\hrule\vspace{5pt}}
+\newcommand{\answerbox}[1]{\colorbox{softgreen}{\parbox{0.96\linewidth}{#1}}}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries\color{ink} MEDIA SPOTLIGHT FOR CAPSTONE PROJECTS}\\[5pt]
+  {\huge\bfseries\color{nedbankgreen} Listening to Enbi and DeepSeek}\\[3pt]
+  {\large Comparing a public banking chatbot with a general-purpose model}\\[8pt]
+  \textbf{Bootcamper:} [Add your name] \qquad
+  \textbf{Project name:} Enbi Public Chatbot Assessment \qquad
+  \textbf{Cohort:} S2026
+\end{center}
+
+\sectiontitle{ORIGIN}
+I came to the Wecncode Bootcamp curious about how artificial intelligence behaves when
+people use it for everyday tasks. I wanted to move beyond examples in a lesson and observe
+an assistant in a real public setting, while keeping the work careful, small in scale and
+respectful of the people and service behind it.
+
+\sectiontitle{EUREKA MOMENT}
+The project began with a practical question: how do AI assistants respond to banking
+questions, safety concerns and attempts to push beyond their stated role? I chose Enbi as
+a public, bank-specific chatbot, then added DeepSeek as a general-purpose model to give
+the study a useful point of comparison. I wanted to see how a broad assistant handles the
+same kinds of banking-related questions when it is not the bank's own chatbot, especially
+where capability limits, safety and confident factual claims matter. A surprising or
+irrelevant answer is not automatically a security failure; it has to be recorded and
+interpreted in context.
+
+\sectiontitle{THE PROJECT}
+This project records Enbi's responses to public banking questions and a bounded set of
+adversarial prompts. A companion evaluation records DeepSeek's answers to 37 related,
+rephrased prompts. The two tracks explore how a bank-specific chatbot and a general-purpose
+model handle banking topics; they are not a controlled benchmark or a full security audit.
+
+\begin{itemize}
+  \item \textbf{Structured prompt set:} questions are grouped by purpose and assigned IDs, so each observation can be traced back to what was asked.
+  \item \textbf{Evidence-based logging:} CSV records, response transcripts and selected screenshots make the observations reviewable and reproducible.
+  \item \textbf{Cross-model perspective:} a separate DeepSeek prompt set uses matching IDs and related wording to explore capability boundaries, safety guidance and factual confidence.
+  \item \textbf{Careful interpretation:} results distinguish refusals, ordinary responses and inconclusive cases; unexpected wording is reported as an observation unless there is evidence of real impact.
+\end{itemize}
+
+\sectiontitle{THE TECH STACK}
+\begin{itemize}
+  \item \textbf{Enbi's public chat:} the system being observed, accessed as an ordinary visitor.
+  \item \textbf{DeepSeek V4.1 Flash:} the general-purpose model in a separate 37-run comparison track. It was evaluated with manually submitted prompts; the project does not claim to have built or trained the model.
+  \item \textbf{Python 3 standard library:} a small local logger records one row per completed run, including prompt identifiers and a prompt hash. It does not contact either model.
+  \item \textbf{PowerShell:} optional wrappers make it easier to record completed manual observations consistently.
+  \item \textbf{CSV, plain text and Markdown:} lightweight formats keep prompts, responses, logs and project notes easy to inspect.
+  \item \textbf{LaTeX:} used to prepare this polished, shareable project summary.
+\end{itemize}
+
+\sectiontitle{DATA COLLECTION / INSIGHTS}
+I collected both sets manually, entering prompts in the relevant chat interface and saving
+the responses and assessments locally. The Enbi records contain 29 benign runs and eight
+adversarial runs. The separate DeepSeek log contains 37 runs across related categories,
+including prompt-injection, social engineering, privacy, fraud, factuality and safety.
+No account was logged into and no real customer information was submitted.
+
+Across repeated balance and branch questions, Enbi gave stable navigation guidance. Its
+password-reset answer varied. In the eight adversarial Enbi runs, no account-specific data
+was disclosed. DeepSeek often stated limits and redirected account-specific requests to
+official channels, but some answers included specific hotline, interest-rate, timing or
+legal claims that were not verified in the run. That is why the comparison matters: a
+helpful-sounding general answer still needs fact-checking, especially in a banking context.
+The prompt wording and coverage are not fully paired across both systems, so these records
+support exploratory observations, not a model ranking or a claim about either system's
+overall security.
+
+In the 37 DeepSeek responses, it generally refused private account lookups, credential
+handling and attempts to extract or bypass its instructions. There were also clear
+reliability cautions: when asked who made it, DeepSeek answered OpenAI even though the run
+metadata records DeepSeek V4.1 Flash. Several financial rates, payment timings, legal
+details and contact numbers were stated without verification. The comparison therefore
+looks at both safety boundaries and whether confident-sounding banking guidance deserves
+independent checking.
+
+\sectiontitle{TUTORIAL: HOW TO RUN A SMALL, RESPONSIBLE OBSERVATION STUDY}
+\begin{enumerate}[leftmargin=1.6em,itemsep=3pt]
+  \item \textbf{Choose an appropriate public target.} Record the public URL and access context. Use only an interface an ordinary visitor can reach.
+  \item \textbf{Set boundaries first.} Exclude accounts, real personal data, private endpoints, transactions, automation and high-volume requests. Agree on stop conditions.
+  \item \textbf{Write and review prompts.} Group questions by purpose, assign an ID to each, and review the final list with the project mentor before using it.
+  \item \textbf{Capture each run manually.} Enter the prompt in the normal interface. Save the exact response and, when useful, a screenshot. Do not submit real credentials or customer details.
+  \item \textbf{Log what happened.} Record the prompt ID, date, response file, outcome and whether the result was blocked, not blocked or inconclusive. Keep observations separate from security findings.
+  \item \textbf{Compare cautiously.} If evaluating a second model, use related prompts, log it separately and fact-check important claims. Say whether the samples are paired and avoid treating a small sample as a ranking.
+  \item \textbf{Summarize with limits.} Count the runs, describe repeated patterns, call out incomplete records and state what the sample cannot prove.
+\end{enumerate}
+
+\begin{center}
+\fcolorbox{nedbankgreen}{softgreen}{\parbox{0.91\linewidth}{\centering\small
+Scope and prompt review $\longrightarrow$ Manual public interaction $\longrightarrow$
+Transcript and evidence $\longrightarrow$ Log and classify $\longrightarrow$ Report with limitations}}
+\end{center}
+
+\newpage
+\sectiontitle{TUTORIAL: EXAMPLE EVIDENCE FROM BOTH MODELS}
+\begin{center}
+\textbf{Enbi: stable balance guidance}\\[3pt]
+\begin{minipage}{0.43\linewidth}\centering
+\includegraphics[width=\linewidth]{../tests/evidence/Enbi-B2-2026-10-18-context.png}
+\end{minipage}\hfill
+\begin{minipage}{0.43\linewidth}\centering
+\includegraphics[width=\linewidth]{../tests/evidence/Enbi-T3-2026-10-18-context.png}
+\end{minipage}\\[4pt]
+{\small\textit{Two differently worded balance questions received the same Money app and Online Banking guidance. T3 is illustrative evidence from the supplied PDF.}}\\[7pt]
+\textbf{DeepSeek: response excerpts}\\[3pt]
+\begin{minipage}{0.43\linewidth}\centering
+\includegraphics[width=\linewidth]{../tests/evidence/deepseek/DeepSeek-P5-response-crop.png}
+\end{minipage}\hfill
+\begin{minipage}{0.43\linewidth}\centering
+\includegraphics[width=\linewidth]{../tests/evidence/deepseek/DeepSeek-D4-response-crop.png}
+\end{minipage}\\[4pt]
+{\small\textit{Cropped excerpts of the user-facing answers; the supplied full captures are preserved under \texttt{tests/evidence/deepseek/}.}}
+\end{center}
+
+\sectiontitle{RESULTS AT A GLANCE}
+\answerbox{\textbf{Enbi:} 29 benign runs and 8 adversarial runs\\
+\textbf{DeepSeek V4.1 Flash:} 37 manually submitted comparison prompts\\
+\textbf{Why compare:} Explore how a general-purpose model handles banking-related safety, capability and factuality questions\\
+\textbf{What the sample showed:} No account-specific data appeared in the eight adversarial Enbi responses. Some DeepSeek factual claims were not verified. The samples do not support an overall security conclusion or model ranking.}
+
+\sectiontitle{THE BIGGEST LESSON}
+My biggest lesson was that a surprising answer is not automatically a vulnerability. I had
+to slow down, preserve what was actually observed, separate a refusal from a generic
+fallback, and avoid making a broader claim than the evidence supports. That discipline
+changed how I think about AI assessment: responsible testing depends as much on careful
+measurement and honest limits as on the prompts themselves.
+
+\clearpage
+\sectiontitle{STANDOUT MOMENT}
+The most memorable comparison was seeing Enbi give the same balance guidance to differently
+worded questions, while DeepSeek answer to "Who made you?" named OpenAI even though the
+run metadata records DeepSeek V4.1 Flash. That mismatch showed why model self-description
+also needs checking against independent records. Neither result reveals internal design or
+proves that every safeguard works in every case.
+
+\sectiontitle{DELIVERABLES REQUESTED}
+\begin{itemize}
+  \item \textbf{GitHub repository:} [Add the URL for your project repository. The reference repository is not assumed to be yours.]
+  \item \textbf{One-minute introduction video:} [Record an introduction and project overview; upload it to Google Drive and add the share link.]
+  \item \textbf{Screenshots / diagrams:} Included above as a sample of the manual observation workflow. Additional run evidence is stored under \texttt{tests/evidence/}.
+\end{itemize}
+
+\vfill
+\begin{center}\footnotesize\color{ink}
+Project records: \href{../README.md}{README and repository guide} \textbullet{}
+\href{FINAL_REPORT.pdf}{Enbi and DeepSeek project report} \textbullet{}
+\href{../datasets/text/test_log.csv}{Benign log} \textbullet{}
+\href{../datasets/text/test_log_adversarial.csv}{Adversarial log}
+\end{center}
+
+\end{document}
