@@ -1,0 +1,31 @@
+# LaTeX build artefacts (regenerate with pdflatex; the PDFs are committed)
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+texput.log
+
+# Local-only bootcamp template, not part of the submission
+docs/PR Project Template.pdf
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# OS and editor clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
