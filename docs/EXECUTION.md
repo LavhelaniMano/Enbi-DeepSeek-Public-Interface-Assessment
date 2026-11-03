@@ -47,7 +47,7 @@ published terms/usage rules, and a public reporting contact.
 ## Phase 1 — Environment setup
 
 ```powershell
-cd C:\Users\Honours\Desktop\Final_Project
+cd path\to\your-clone   # repository root
 python --version          # expect 3.1x; log_result.py is stdlib-only, no venv needed
 ```
 
