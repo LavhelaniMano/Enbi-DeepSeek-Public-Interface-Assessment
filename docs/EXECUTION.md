@@ -1,4 +1,4 @@
-# EXECUTION.md — Runbook for Track A Red Team Assessment
+# EXECUTION.md — Runbook for the Enbi and DeepSeek Public-Interface Assessment
 
 **Purpose:** operational companion to `README.md` (scope/methodology) and `Track_A_Red_Team_Proposal_Trimmed.md` (rationale).
 This file is the checklist you actually execute against, day by day, with commands.

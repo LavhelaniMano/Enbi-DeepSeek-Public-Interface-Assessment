@@ -1,6 +1,6 @@
-# Final Project Report: Public-Interface Observations of Enbi
+# Final Project Report: Public-Interface Assessment of Enbi and DeepSeek
 
-**Project:** Track A — Red Team Assessment / Public Observation of Enbi  
+**Project:** Track A — Public-Interface Assessment of the Enbi Chatbot, with a DeepSeek V4.1 Flash comparison  
 **Systems:** Enbi, Nedbank (South Africa); DeepSeek V4.1 Flash comparison  
 **Target URL:** <https://personal.nedbank.co.za/contact/Enbi-chat.html>  
 **Reporting date:** 2026-11-03  

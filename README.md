@@ -45,12 +45,14 @@ Four short analyses sit alongside the runbook and the report — two for the Enb
 - [**Prompt Injection and Trust Boundaries in the DeepSeek Comparison**](cybersecurity-notes/deepseek_prompt_injection_notes.md) — instruction extraction, encoding and language switching, claimed authority, request-splitting (A1/A2), context bleed, and the overclaiming risk that matters more than jailbreaking.
 
 ## Project title
-Track A — Red Team Assessment of the Enbi Chatbot
+**Track A — Public-Interface Assessment of the Enbi Chatbot**
+*with a DeepSeek V4.1 Flash comparison*
 
 > **Current scope:** Enbi (Nedbank) is the selected target, tested through its public
 > website chat only. Two approved phases are running: a benign observation study
 > (Sections A–C of `datasets/text/prompts.md`) and an adversarial probe set (Section D, 37
-> prompts) added by mentor approval on 2026-10-17. Never
+> prompts) added by mentor approval on 2026-10-17. A separate DeepSeek V4.1 Flash
+> comparison covers the same 37 probe types in rephrased form. Never
 > enter real account or personal details. TOBi was not used because its sales chat
 > requested contact details and routed to a live agent.
 
