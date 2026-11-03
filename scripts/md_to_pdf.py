@@ -5,7 +5,7 @@ Pipeline: Markdown -> LaTeX (article class, Latin Modern, booktabs tables,
 hyperref links) -> PDF via pdflatex. The output deliberately reads as a
 typeset document rather than a Word export: Computer Modern/Latin Modern
 serif, justified text, indented paragraphs, rule-based tables and
-numbered-free section headings.
+numbered-free section headings and flush-left, consistently spaced paragraphs.
 
 Usage (from the repository root):
     python scripts\\md_to_pdf.py
@@ -45,7 +45,8 @@ PREAMBLE = r"""
 \usepackage{titlesec}
 \usepackage[hidelinks]{hyperref}
 \urlstyle{same}
-\setlength{\parindent}{15pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
 \setlength{\emergencystretch}{3em}
 \titleformat{\section}{\normalfont\Large\bfseries}{}{0pt}{}
 \titlespacing*{\section}{0pt}{15pt plus 2pt minus 2pt}{6pt}
