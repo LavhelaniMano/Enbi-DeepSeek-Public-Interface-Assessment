@@ -364,13 +364,7 @@ def main() -> int:
         finally:
             tex_path.unlink(missing_ok=True)
 
-    try:
-        from pypdf import PdfReader
-
-        pages = len(PdfReader(str(OUT)).pages)
-    except Exception:
-        pages = "?"
-    print(f"wrote {OUT.name}: {OUT.stat().st_size / 1024:.0f} KB, {pages} pages")
+    print(f"wrote {OUT.name}: {OUT.stat().st_size / 1024:.0f} KB")
     return 0
 
 
