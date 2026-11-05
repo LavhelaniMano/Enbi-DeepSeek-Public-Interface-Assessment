@@ -339,7 +339,6 @@ verification before being repeated as banking guidance.
 - [Adversarial run log](../datasets/text/test_log_adversarial.csv)
 - [Excluded-run log](../datasets/text/excluded_runs.csv)
 - [Detailed adversarial observation report](./ADVERSARIAL_OBSERVATION_REPORT.md)
-- [One-minute introduction video script](./VIDEO_SCRIPT.md)
 - [CIA-triad analysis](../cybersecurity-notes/enbi_cia_triad.md)
 - [Prompt-injection and trust-boundary notes](../cybersecurity-notes/enbi_prompt_injection_notes.md)
 - [DeepSeek CIA-triad analysis](../cybersecurity-notes/deepseek_cia_triad.md)
